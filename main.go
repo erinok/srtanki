@@ -88,7 +88,7 @@ func overlappingSubs(sub *astisub.Item, subs []*astisub.Item) []*astisub.Item {
 func writeFlashcards(f io.Writer, subs, xsubs *astisub.Subtitles) {
 	for i, item := range subs.Items {
 		xitems := overlappingSubs(item, xsubs.Items)
-		fmt.Fprintln(f, fmtSub(item), "\t", fmtSubs(xitems), "\t", clipFname(i, item))
+		fmt.Fprintln(f, fmtSub(item), "\t", fmtSubs(xitems), "\t", fmt.Sprint("[sound:", clipFname(i, item), "]"))
 	}
 }
 
