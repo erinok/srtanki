@@ -1,3 +1,4 @@
+// Program srtanki makes flashcards (suitable for import by Anki) given .srt subtitle files a movie file.
 package main
 
 import (
@@ -6,6 +7,8 @@ import (
 	"io"
 	"os"
 	"os/exec"
+	"path/filepath"
+	"regexp"
 	"runtime"
 	"strings"
 	"sync"
@@ -23,12 +26,14 @@ var (
 	numCores = flag.Int("numCore", 2*runtime.NumCPU(), "use up to `CORES` threads while converting audio")
 )
 
-func clipFname(idx int, item *astisub.Item) string {
-	return fmt.Sprint(*movFile, ".", idx+1, ".mp3")
+var mediaDir, movName string
+
+func clipName(idx int, item *astisub.Item) string {
+	return fmt.Sprint(movName, ".", idx+1, ".mp3")
 }
 
 func extractAudioClip(idx int, item *astisub.Item) {
-	fname := clipFname(idx, item)
+	fname := mediaDir + clipName(idx, item)
 	if stat, err := os.Stat(fname); err == nil && stat.Size() > 0 {
 		// clip already exists; do nothing
 		return
@@ -40,7 +45,7 @@ func extractAudioClip(idx int, item *astisub.Item) {
 		"-i", *movFile,
 		"-ss", fmt.Sprintf("%.03f", ss),
 		"-t", fmt.Sprintf("%.03f", t),
-		clipFname(idx, item),
+		fname,
 	)
 	fmt.Println(">", strings.Join(cmd.Args, " "))
 	buf, err := cmd.CombinedOutput()
@@ -49,22 +54,23 @@ func extractAudioClip(idx int, item *astisub.Item) {
 	}
 }
 
+var spacesRegexp = regexp.MustCompile("  +")
+var spanRegexp = regexp.MustCompile("<span [^>]*>")
+
 func fmtSub(sub *astisub.Item) string {
-	s := sub.String()
+	s := join(len(sub.Lines), " ", func(i int) string { return sub.Lines[i].String() })
 	s = strings.Replace(s, "\n", "<br/>", -1)
 	s = strings.Replace(s, "\t", " ", -1)
+	s = strings.Replace(s, "<i>", "", -1)
+	s = strings.Replace(s, "</i>", "", -1)
+	s = strings.Replace(s, `{\an8}`, "", -1)
+	s = spacesRegexp.ReplaceAllString(s, " ")
+	s = spanRegexp.ReplaceAllString(s, "")
 	return s
 }
 
 func fmtSubs(subs []*astisub.Item) string {
-	var s string
-	for i, sub := range subs {
-		if i > 0 {
-			s += "<br/>"
-		}
-		s += fmtSub(sub)
-	}
-	return s
+	return join(len(subs), "<br/>", func(i int) string { return fmtSub(subs[i]) })
 }
 
 // return the items in subs that overlap sub
@@ -88,22 +94,24 @@ func overlappingSubs(sub *astisub.Item, subs []*astisub.Item) []*astisub.Item {
 func writeFlashcards(f io.Writer, subs, xsubs *astisub.Subtitles) {
 	for i, item := range subs.Items {
 		xitems := overlappingSubs(item, xsubs.Items)
-		fmt.Fprintln(f, fmtSub(item), "\t", fmtSubs(xitems), "\t", fmt.Sprint("[sound:", clipFname(i, item), "]"))
+		fmt.Fprintln(f, fmtSub(item), "\t", fmtSubs(xitems), "\t", fmt.Sprint("[sound:", clipName(i, item), "]"))
 	}
 }
 
 func main() {
 	flag.Parse()
-	if *movFile == "" || *srtFile == "" {
+	if *movFile == "" || *srtFile == "" || *xsrtFile == "" {
 		fatal("must pass -mov, -srt, and -xrt")
+	}
+	mediaDir, movName = filepath.Split(*movFile)
+	mediaDir += "media/"
+	if err := os.MkdirAll(mediaDir, 0777); err != nil {
+		fatal("could not create media directory:", err)
 	}
 	subs, err := astisub.OpenFile(*srtFile)
 	if err != nil {
 		fatal(err)
 	}
-	parallelDo(len(subs.Items), *numCores, func(i int) {
-		extractAudioClip(i, subs.Items[i])
-	})
 	xsubs, err := astisub.OpenFile(*xsrtFile)
 	if err != nil {
 		fatal(err)
@@ -114,6 +122,9 @@ func main() {
 	}
 	defer f.Close()
 	writeFlashcards(f, subs, xsubs)
+	parallelDo(len(subs.Items), *numCores, func(i int) {
+		extractAudioClip(i, subs.Items[i])
+	})
 	if false {
 		for _, item := range subs.Items {
 			fmt.Println(item.String())
@@ -141,4 +152,12 @@ func parallelDo(n int, numCores int, f func(int)) {
 		}()
 	}
 	wg.Wait()
+}
+
+func join(n int, sep string, f func(int) string) string {
+	ss := make([]string, n)
+	for i := 0; i < n; i++ {
+		ss[i] = f(i)
+	}
+	return strings.Join(ss, sep)
 }
