@@ -23,6 +23,7 @@ var (
 	xsrtFile = flag.String("xsrt", "", "`SRT` translated subtitles")
 	xbefore  = flag.Duration("xbefore", 500*time.Millisecond, "include `DUR` time before each audio clip")
 	xafter   = flag.Duration("xafter", 2000*time.Millisecond, "include `DUR` time after each audio clip")
+	imgWidth = flag.Float64("imgwidth", 1400, "scale imgs to this width")
 	numCores = flag.Int("numCore", 2*runtime.NumCPU(), "use up to `CORES` threads while converting audio")
 )
 
@@ -32,7 +33,11 @@ func clipName(idx int, item *astisub.Item) string {
 	return fmt.Sprint(movName, ".", idx+1, ".mp3")
 }
 
-func extractAudioClip(idx int, item *astisub.Item) {
+func imageName(idx int, item *astisub.Item) string {
+	return fmt.Sprint(movName, ".", idx+1, ".jpg")
+}
+
+func extractClip(idx int, item *astisub.Item) {
 	fname := mediaDir + clipName(idx, item)
 	if stat, err := os.Stat(fname); err == nil && stat.Size() > 0 {
 		// clip already exists; do nothing
@@ -45,6 +50,29 @@ func extractAudioClip(idx int, item *astisub.Item) {
 		"-i", *movFile,
 		"-ss", fmt.Sprintf("%.03f", ss),
 		"-t", fmt.Sprintf("%.03f", t),
+		fname,
+	)
+	fmt.Println(">", strings.Join(cmd.Args, " "))
+	buf, err := cmd.CombinedOutput()
+	if err != nil {
+		fatal("error running ffmpeg:\n", string(buf))
+	}
+}
+
+func extractImage(idx int, item *astisub.Item) {
+	fname := mediaDir + imageName(idx, item)
+	if stat, err := os.Stat(fname); err == nil && stat.Size() > 0 {
+		// image already exists; do nothing
+		return
+	}
+	ss := (item.StartAt + item.EndAt).Seconds() / 2
+	cmd := exec.Command("ffmpeg",
+		"-ss", fmt.Sprintf("%.03f", ss),
+		"-y", // overwrite existing files
+		"-i", *movFile,
+		"-vframes", "1",
+		"-q:v", "2",
+		"-vf", fmt.Sprint("scale=", *imgWidth, ":-1"),
 		fname,
 	)
 	fmt.Println(">", strings.Join(cmd.Args, " "))
@@ -86,22 +114,32 @@ func overlappingSubs(sub *astisub.Item, subs []*astisub.Item) []*astisub.Item {
 	return subs[i:j]
 }
 
+func ankiSound(soundfile string) string { return fmt.Sprintf("[sound:%s]", soundfile) }
+func ankiImage(imagefile string) string { return fmt.Sprintf(`<img src="%s">`, imagefile) }
+
 // outputs:
 //
 // orig text
 // trans text
 // audio
+// image
 func writeFlashcards(f io.Writer, subs, xsubs *astisub.Subtitles) {
 	for i, item := range subs.Items {
 		xitems := overlappingSubs(item, xsubs.Items)
-		fmt.Fprintln(f, fmtSub(item), "\t", fmtSubs(xitems), "\t", fmt.Sprint("[sound:", clipName(i, item), "]"))
+		fmt.Fprint(f,
+			fmtSub(item), "\t",
+			fmtSubs(xitems), "\t",
+			ankiSound(clipName(i, item)), "\t",
+			ankiImage(imageName(i, item)), "\t",
+			"\n",
+		)
 	}
 }
 
 func main() {
 	flag.Parse()
 	if *movFile == "" || *srtFile == "" || *xsrtFile == "" {
-		fatal("must pass -mov, -srt, and -xrt")
+		fatal("must pass -mov, -srt, and -xsrt")
 	}
 	mediaDir, movName = filepath.Split(*movFile)
 	mediaDir += "media/"
@@ -123,7 +161,8 @@ func main() {
 	defer f.Close()
 	writeFlashcards(f, subs, xsubs)
 	parallelDo(len(subs.Items), *numCores, func(i int) {
-		extractAudioClip(i, subs.Items[i])
+		extractClip(i, subs.Items[i])
+		extractImage(i, subs.Items[i])
 	})
 	if false {
 		for _, item := range subs.Items {
