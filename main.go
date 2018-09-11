@@ -15,12 +15,14 @@ import (
 	"time"
 
 	astisub "github.com/asticode/go-astisub"
+	"github.com/erinok/jyutping"
 )
 
 var (
 	srtFile  = flag.String("srt", "", "`SRT` subtitles of movie's spoken audio")
 	movFile  = flag.String("mov", "", "extract mp3 clips from `MOVIE`")
 	xsrtFile = flag.String("xsrt", "", "`SRT` translated subtitles")
+	jp       = flag.Bool("jp", false, "write jyutping romanization of srt")
 	xbefore  = flag.Duration("xbefore", 500*time.Millisecond, "include `DUR` time before each audio clip")
 	xafter   = flag.Duration("xafter", 2000*time.Millisecond, "include `DUR` time after each audio clip")
 	imgWidth = flag.Float64("imgwidth", 1400, "scale imgs to this width")
@@ -120,19 +122,29 @@ func ankiImage(imagefile string) string { return fmt.Sprintf(`<img src="%s">`, i
 // outputs:
 //
 // orig text
+// [jyutping]
 // trans text
 // audio
 // image
 func writeFlashcards(f io.Writer, subs, xsubs *astisub.Subtitles) {
 	for i, item := range subs.Items {
 		xitems := overlappingSubs(item, xsubs.Items)
-		fmt.Fprint(f,
-			fmtSub(item), "\t",
-			fmtSubs(xitems), "\t",
-			ankiSound(clipName(i, item)), "\t",
-			ankiImage(imageName(i, item)), "\t",
-			"\n",
-		)
+		if *jp {
+			fmt.Fprint(f,
+				fmtSub(item), "\t",
+				strings.Replace(jyutping.Convert(fmtSub(item)), "  ", " ", -1), "\t",
+				fmtSubs(xitems), "\t",
+				ankiSound(clipName(i, item)), "\t",
+				ankiImage(imageName(i, item)), "\t",
+				"\n")
+		} else {
+			fmt.Fprint(f,
+				fmtSub(item), "\t",
+				fmtSubs(xitems), "\t",
+				ankiSound(clipName(i, item)), "\t",
+				ankiImage(imageName(i, item)), "\t",
+				"\n")
+		}
 	}
 }
 
