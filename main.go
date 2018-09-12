@@ -96,6 +96,7 @@ func fmtSub(sub *astisub.Item) string {
 	s = strings.Replace(s, `{\an8}`, "", -1)
 	s = spacesRegexp.ReplaceAllString(s, " ")
 	s = spanRegexp.ReplaceAllString(s, "")
+	s = strings.TrimSpace(s)
 	return s
 }
 
