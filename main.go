@@ -88,7 +88,7 @@ var spacesRegexp = regexp.MustCompile("  +")
 var spanRegexp = regexp.MustCompile("<span [^>]*>")
 
 func fmtSub(sub *astisub.Item) string {
-	s := join(len(sub.Lines), " ", func(i int) string { return sub.Lines[i].String() })
+	s := join(len(sub.Lines), "<br/>", func(i int) string { return sub.Lines[i].String() })
 	s = strings.Replace(s, "\n", "<br/>", -1)
 	s = strings.Replace(s, "\t", " ", -1)
 	s = strings.Replace(s, "<i>", "", -1)
