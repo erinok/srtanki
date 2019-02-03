@@ -40,47 +40,57 @@ func imageName(idx int, item *astisub.Item) string {
 }
 
 func extractClip(idx int, item *astisub.Item) {
-	fname := mediaDir + clipName(idx, item)
+	nm := clipName(idx, item)
+	fname := mediaDir + nm
 	if stat, err := os.Stat(fname); err == nil && stat.Size() > 0 {
 		// clip already exists; do nothing
 		return
 	}
+	tmp := mediaDir + "tmp." + nm
 	ss := (item.StartAt - *xbefore).Seconds()
 	t := (item.EndAt + *xafter).Seconds() - ss
-	cmd := exec.Command("ffmpeg",
+	cmd := exec.Command("nice", "ffmpeg",
 		"-y", // overwrite existing files
 		"-i", *movFile,
 		"-ss", fmt.Sprintf("%.03f", ss),
 		"-t", fmt.Sprintf("%.03f", t),
-		fname,
+		tmp,
 	)
 	fmt.Println(">", strings.Join(cmd.Args, " "))
 	buf, err := cmd.CombinedOutput()
 	if err != nil {
 		fatal("error running ffmpeg:\n", string(buf))
 	}
+	if err = os.Rename(tmp, fname); err != nil {
+		fatal("error moving temporary file into final location:", err)
+	}
 }
 
 func extractImage(idx int, item *astisub.Item) {
-	fname := mediaDir + imageName(idx, item)
+	nm := imageName(idx, item)
+	fname := mediaDir + nm
 	if stat, err := os.Stat(fname); err == nil && stat.Size() > 0 {
 		// image already exists; do nothing
 		return
 	}
+	tmp := mediaDir + "tmp." + nm
 	ss := (item.StartAt + item.EndAt).Seconds() / 2
-	cmd := exec.Command("ffmpeg",
+	cmd := exec.Command("nice", "ffmpeg",
 		"-ss", fmt.Sprintf("%.03f", ss),
 		"-y", // overwrite existing files
 		"-i", *movFile,
 		"-vframes", "1",
 		"-q:v", "2",
 		"-vf", fmt.Sprint("scale=", *imgWidth, ":-1"),
-		fname,
+		tmp,
 	)
 	fmt.Println(">", strings.Join(cmd.Args, " "))
 	buf, err := cmd.CombinedOutput()
 	if err != nil {
 		fatal("error running ffmpeg:\n", string(buf))
+	}
+	if err = os.Rename(tmp, fname); err != nil {
+		fatal("error moving temporary file into final location:", err)
 	}
 }
 
