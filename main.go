@@ -14,7 +14,6 @@ import (
 	"sync"
 	"time"
 
-	astisub "github.com/asticode/go-astisub"
 	"github.com/erinok/jyutping"
 )
 
@@ -31,15 +30,15 @@ var (
 
 var mediaDir, movName string
 
-func clipName(idx int, item *astisub.Item) string {
+func clipName(idx int, item *Sub) string {
 	return fmt.Sprint(movName, ".", idx+1, ".mp3")
 }
 
-func imageName(idx int, item *astisub.Item) string {
+func imageName(idx int, item *Sub) string {
 	return fmt.Sprint(movName, ".", idx+1, ".jpg")
 }
 
-func extractClip(idx int, item *astisub.Item) {
+func extractClip(idx int, item *Sub) {
 	nm := clipName(idx, item)
 	fname := mediaDir + nm
 	if stat, err := os.Stat(fname); err == nil && stat.Size() > 0 {
@@ -47,8 +46,8 @@ func extractClip(idx int, item *astisub.Item) {
 		return
 	}
 	tmp := mediaDir + "tmp." + nm
-	ss := (item.StartAt - *xbefore).Seconds()
-	t := (item.EndAt + *xafter).Seconds() - ss
+	ss := (item.From - *xbefore).Seconds()
+	t := (item.To + *xafter).Seconds() - ss
 	cmd := exec.Command("nice", "ffmpeg",
 		"-y", // overwrite existing files
 		"-i", *movFile,
@@ -66,7 +65,7 @@ func extractClip(idx int, item *astisub.Item) {
 	}
 }
 
-func extractImage(idx int, item *astisub.Item) {
+func extractImage(idx int, item *Sub) {
 	nm := imageName(idx, item)
 	fname := mediaDir + nm
 	if stat, err := os.Stat(fname); err == nil && stat.Size() > 0 {
@@ -74,7 +73,7 @@ func extractImage(idx int, item *astisub.Item) {
 		return
 	}
 	tmp := mediaDir + "tmp." + nm
-	ss := (item.StartAt + item.EndAt).Seconds() / 2
+	ss := (item.From + item.To).Seconds() / 2
 	cmd := exec.Command("nice", "ffmpeg",
 		"-ss", fmt.Sprintf("%.03f", ss),
 		"-y", // overwrite existing files
@@ -97,8 +96,8 @@ func extractImage(idx int, item *astisub.Item) {
 var spacesRegexp = regexp.MustCompile("  +")
 var spanRegexp = regexp.MustCompile("<span [^>]*>")
 
-func fmtSub(sub *astisub.Item) string {
-	s := join(len(sub.Lines), "<br/>", func(i int) string { return sub.Lines[i].String() })
+func fmtSub(sub *Sub) string {
+	s := join(len(sub.Lines), "<br/>", func(i int) string { return sub.Lines[i] })
 	s = strings.Replace(s, "\n", "<br/>", -1)
 	s = strings.Replace(s, "\t", " ", -1)
 	s = strings.Replace(s, "<i>", "", -1)
@@ -110,18 +109,18 @@ func fmtSub(sub *astisub.Item) string {
 	return s
 }
 
-func fmtSubs(subs []*astisub.Item) string {
+func fmtSubs(subs []*Sub) string {
 	return join(len(subs), "<br/>", func(i int) string { return fmtSub(subs[i]) })
 }
 
 // return the items in subs that overlap sub
-func overlappingSubs(sub *astisub.Item, subs []*astisub.Item) []*astisub.Item {
+func overlappingSubs(sub *Sub, subs []*Sub) []*Sub {
 	i := 0
-	for i < len(subs) && !(sub.StartAt <= subs[i].EndAt) {
+	for i < len(subs) && !(sub.From <= subs[i].To) {
 		i++
 	}
 	j := i
-	for j < len(subs) && !(sub.EndAt < subs[j].StartAt) {
+	for j < len(subs) && !(sub.To < subs[j].From) {
 		j++
 	}
 	return subs[i:j]
@@ -137,9 +136,9 @@ func ankiImage(imagefile string) string { return fmt.Sprintf(`<img src="%s">`, i
 // trans text
 // audio
 // image
-func writeFlashcards(f io.Writer, subs, xsubs *astisub.Subtitles) {
-	for i, item := range subs.Items {
-		xitems := overlappingSubs(item, xsubs.Items)
+func writeFlashcards(f io.Writer, subs, xsubs Subs) {
+	for i, item := range subs.Sub {
+		xitems := overlappingSubs(item, xsubs.Sub)
 		if *jp {
 			fmt.Fprint(f,
 				fmtSub(item), "\t",
@@ -169,11 +168,11 @@ func main() {
 	if err := os.MkdirAll(mediaDir, 0777); err != nil {
 		fatal("could not create media directory:", err)
 	}
-	subs, err := astisub.OpenFile(*srtFile)
+	subs, err := ReadSRTFile(*srtFile)
 	if err != nil {
 		fatal(err)
 	}
-	xsubs, err := astisub.OpenFile(*xsrtFile)
+	xsubs, err := ReadSRTFile(*xsrtFile)
 	if err != nil {
 		fatal(err)
 	}
@@ -183,12 +182,12 @@ func main() {
 	}
 	defer f.Close()
 	writeFlashcards(f, subs, xsubs)
-	parallelDo(len(subs.Items), *numCores, func(i int) {
-		extractClip(i, subs.Items[i])
-		extractImage(i, subs.Items[i])
+	parallelDo(len(subs.Sub), *numCores, func(i int) {
+		extractClip(i, subs.Sub[i])
+		extractImage(i, subs.Sub[i])
 	})
 	if false {
-		for _, item := range subs.Items {
+		for _, item := range subs.Sub {
 			fmt.Println(item.String())
 		}
 	}

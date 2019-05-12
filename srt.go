@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"io/ioutil"
 	"strconv"
 	"strings"
 	"time"
@@ -14,9 +15,17 @@ import (
 // Sub := «Number» "\n" «Timespan» "\n" {«Line»} "\n"
 // Timespan := «Time» "-->" «Time»
 // Time := «Digit»«Digit» ":" «Digit»«Digit» ":" «Digit»«Digit» ["," | "."] «Digit»«Digit»«Digit»
-// Line := /^.+$/
+// Line := /^[^ ].*$/
 // Digit := /[0-9]/
 // Number := /[1-9][0-9]*/
+
+func ReadSRTFile(fname string) (Subs, error) {
+	s, err := ioutil.ReadFile(fname)
+	if err != nil {
+		return Subs{}, err
+	}
+	return ParseSRT(string(s))
+}
 
 func ParseSRT(s string) (Subs, error) {
 	subs, i, err := parseSubs(s, 0)
@@ -43,7 +52,7 @@ func parseSubs(s string, i int) (Subs, int, error) {
 		if err != nil {
 			return Subs{}, i, err
 		}
-		subs.Sub = append(subs.Sub, sub)
+		subs.Sub = append(subs.Sub, &sub)
 	}
 	return subs, i, nil
 }
