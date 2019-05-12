@@ -92,11 +92,14 @@ func extractImage(idx int, item *Sub) {
 	}
 }
 
-var spacesRegexp = regexp.MustCompile("  +")
-var spanRegexp = regexp.MustCompile("<span [^>]*>")
+var spacesRegexp = regexp.MustCompile(`  +`)
+var spanRegexp = regexp.MustCompile(`<span [^>]*>`)
+var newlineRegexp = regexp.MustCompile(`
+([^-])`)
 
 func fmtSub(sub *Sub) string {
-	s := join(len(sub.Lines), "<br/>", func(i int) string { return sub.Lines[i] })
+	s := strings.Join(sub.Lines, "\n")
+	s = newlineRegexp.ReplaceAllString(s, " $1")
 	s = strings.Replace(s, "\n", "<br/>", -1)
 	s = strings.Replace(s, "\t", " ", -1)
 	s = strings.Replace(s, "<i>", "", -1)
