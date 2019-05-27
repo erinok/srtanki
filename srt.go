@@ -13,11 +13,13 @@ import (
 //
 // Subs := {«Sub»}
 // Sub := «Number» "\n" «Timespan» "\n" {«Line»} "\n"
-// Timespan := «Time» "-->" «Time»
+// Timespan := «Time» "-->" «Time» /.*$/
 // Time := «Digit»«Digit» ":" «Digit»«Digit» ":" «Digit»«Digit» ["," | "."] «Digit»«Digit»«Digit»
 // Line := /^[^ ].*$/
 // Digit := /[0-9]/
 // Number := /[1-9][0-9]*/
+//
+// We make some allowances to ignore vtt-style stuff.
 
 func ReadSRTFile(fname string) (Subs, error) {
 	s, err := ioutil.ReadFile(fname)
@@ -28,6 +30,7 @@ func ReadSRTFile(fname string) (Subs, error) {
 }
 
 func ParseSRT(s string) (Subs, error) {
+	// 
 	subs, i, err := parseSubs(s, 0)
 	if err == nil && i != len(s) {
 		err = fmt.Errorf("trailing data")
@@ -63,11 +66,10 @@ func parseSub(s string, i int) (Sub, int, error) {
 		return Sub{}, i, err
 	}
 	i = skipSpace(s, i)
-	from, to, i, err := parseTimestamp(s, i)
+	from, to, i, err := parseTimespan(s, i)
 	if err != nil {
 		return Sub{}, i, err
 	}
-	i = skipSpace(s, i)
 	lines, i, err := parseLines(s, i)
 	if err != nil {
 		return Sub{}, i, err
@@ -90,7 +92,7 @@ func parseNumber(s string, i int) (int, int, error) {
 	return num, i, nil
 }
 
-func parseTimestamp(s string, i int) (time.Duration, time.Duration, int, error) {
+func parseTimespan(s string, i int) (time.Duration, time.Duration, int, error) {
 	from, i, err := parseTime(s, i)
 	if err != nil {
 		return 0, 0, i, err
@@ -104,6 +106,9 @@ func parseTimestamp(s string, i int) (time.Duration, time.Duration, int, error) 
 	to, i, err := parseTime(s, i)
 	if err != nil {
 		return 0, 0, i, err
+	}
+	for i < len(s) && s[i-1] != '\n' {
+		i++
 	}
 	return from, to, i, nil
 }
