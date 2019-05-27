@@ -128,6 +128,44 @@ func overlappingSubs(sub *Sub, subs []*Sub) []*Sub {
 	return subs[i:j]
 }
 
+var unendedSentenceRegexp = regexp.MustCompile(`[\pL,]$`)
+var allCapsRegexp = regexp.MustCompile(`^\pLu*$`)
+
+// should the two subtitles be merged?
+func shouldMerge(s, t *Sub) bool {
+	a := fmtSub(s)
+	a = a[strings.LastIndexByte(a, '\n')+1:]
+	if allCapsRegexp.MatchString(a) {
+		return false
+	}
+	if t.From - s.To > 500*time.Millisecond {
+		return false
+	}
+	return unendedSentenceRegexp.MatchString(a)
+}
+
+// return a new subtitle merging the two subtitles
+func merge(s, t *Sub) *Sub {
+	return &Sub{s.Number, s.From, t.To, append(s.Lines, t.Lines...)}
+}
+
+// merge all subtitles that should be merged
+func mergeSubs(subs Subs) Subs {
+	var ss Subs
+	i := 0
+	for i < len(subs.Sub) {
+		s := subs.Sub[i]
+		j := i + 1
+		for j < len(subs.Sub) && shouldMerge(s, subs.Sub[j]) {
+			s = merge(s, subs.Sub[j])
+			j++
+		}
+		ss.Sub = append(ss.Sub, s)
+		i = j
+	}
+	return ss
+}
+
 func ankiSound(soundfile string) string { return fmt.Sprintf("[sound:%s]", soundfile) }
 func ankiImage(imagefile string) string { return fmt.Sprintf(`<img src="%s">`, imagefile) }
 
@@ -178,6 +216,7 @@ func main() {
 	if err != nil {
 		fatal(err)
 	}
+	subs = mergeSubs(subs)
 	f, err := os.Create(*movFile + ".cards.tsv")
 	if err != nil {
 		fatal(err)

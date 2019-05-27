@@ -30,7 +30,6 @@ func ReadSRTFile(fname string) (Subs, error) {
 }
 
 func ParseSRT(s string) (Subs, error) {
-	// 
 	subs, i, err := parseSubs(s, 0)
 	if err == nil && i != len(s) {
 		err = fmt.Errorf("trailing data")
