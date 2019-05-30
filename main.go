@@ -1,4 +1,4 @@
-// Program srtanki makes flashcards (suitable for import by Anki) given .srt subtitle files a movie file.
+// Program srtanki makes flashcards (suitable for import by Anki) given .srt subtitle files and a movie file.
 package main
 
 import (
@@ -23,6 +23,7 @@ var (
 	jp       = flag.Bool("jp", false, "write jyutping romanization of srt")
 	xbefore  = flag.Duration("xbefore", 500*time.Millisecond, "include `DUR` time before each audio clip")
 	xafter   = flag.Duration("xafter", 2000*time.Millisecond, "include `DUR` time after each audio clip")
+	maxmergegap = flag.Duration("maxMergeGap", 2*time.Second, "allow subtitles that are part of the same sentence to be merged if gap between them is less than `DURATION`")
 	imgWidth = flag.Float64("imgwidth", 1400, "scale imgs to this width")
 	numCores = flag.Int("numCore", 2*runtime.NumCPU(), "use up to `CORES` threads while converting audio")
 )
@@ -138,7 +139,7 @@ func shouldMerge(s, t *Sub) bool {
 	if allCapsRegexp.MatchString(a) {
 		return false
 	}
-	if t.From - s.To > 500*time.Millisecond {
+	if t.From - s.To > *maxmergegap {
 		return false
 	}
 	return unendedSentenceRegexp.MatchString(a)
