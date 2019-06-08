@@ -17,15 +17,15 @@ import (
 )
 
 var (
-	srtFile  = flag.String("srt", "", "`SRT` subtitles of movie's spoken audio")
-	movFile  = flag.String("mov", "", "extract mp3 clips from `MOVIE`")
-	xsrtFile = flag.String("xsrt", "", "`SRT` translated subtitles")
-	jp       = flag.Bool("jp", false, "write jyutping romanization of srt")
-	xbefore  = flag.Duration("xbefore", 500*time.Millisecond, "include `DUR` time before each audio clip")
-	xafter   = flag.Duration("xafter", 2000*time.Millisecond, "include `DUR` time after each audio clip")
+	srtFile     = flag.String("srt", "", "`SRT` subtitles of movie's spoken audio")
+	movFile     = flag.String("mov", "", "extract mp3 clips from `MOVIE`")
+	xsrtFile    = flag.String("xsrt", "", "`SRT` translated subtitles")
+	jp          = flag.Bool("jp", false, "write jyutping romanization of srt")
+	xbefore     = flag.Duration("xbefore", 500*time.Millisecond, "include `DUR` time before each audio clip")
+	xafter      = flag.Duration("xafter", 2000*time.Millisecond, "include `DUR` time after each audio clip")
 	maxmergegap = flag.Duration("maxMergeGap", 2*time.Second, "allow subtitles that are part of the same sentence to be merged if gap between them is less than `DURATION`")
-	imgWidth = flag.Float64("imgwidth", 1400, "scale imgs to this width")
-	numCores = flag.Int("numCore", 2*runtime.NumCPU(), "use up to `CORES` threads while converting audio")
+	imgWidth    = flag.Float64("imgwidth", 1400, "scale imgs to this width")
+	numCores    = flag.Int("numCore", 2*runtime.NumCPU(), "use up to `CORES` threads while converting audio")
 )
 
 var mediaDir, movName string
@@ -139,7 +139,7 @@ func shouldMerge(s, t *Sub) bool {
 	if allCapsRegexp.MatchString(a) {
 		return false
 	}
-	if t.From - s.To > *maxmergegap {
+	if t.From-s.To > *maxmergegap {
 		return false
 	}
 	return unendedSentenceRegexp.MatchString(a)
@@ -172,30 +172,26 @@ func ankiImage(imagefile string) string { return fmt.Sprintf(`<img src="%s">`, i
 
 // outputs:
 //
-// orig text
-// [jyutping]
-// trans text
-// audio
 // image
+// audio
+// orig text
+// trans text
+// google trans text (placeholder for python)
+// [jyutping]
 func writeFlashcards(f io.Writer, subs, xsubs Subs) {
 	for i, item := range subs.Sub {
 		xitems := overlappingSubs(item, xsubs.Sub)
-		if *jp {
-			fmt.Fprint(f,
-				fmtSub(item), "\t",
-				strings.Replace(jyutping.Convert(fmtSub(item)), "  ", " ", -1), "\t",
-				fmtSubs(xitems), "\t",
-				ankiSound(clipName(i, item)), "\t",
-				ankiImage(imageName(i, item)), "\t",
-				"\n")
-		} else {
-			fmt.Fprint(f,
-				fmtSub(item), "\t",
-				fmtSubs(xitems), "\t",
-				ankiSound(clipName(i, item)), "\t",
-				ankiImage(imageName(i, item)), "\t",
-				"\n")
+		cols := []string{
+			ankiImage(imageName(i, item)),
+			ankiSound(clipName(i, item)),
+			fmtSub(item),
+			fmtSubs(xitems),
+			"", // google trans placeholder
 		}
+		if *jp {
+			cols = append(cols, strings.Replace(jyutping.Convert(fmtSub(item)), "  ", " ", -1), "\t")
+		}
+		fmt.Fprintln(f, strings.Join(cols, "\t"))
 	}
 }
 
