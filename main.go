@@ -107,6 +107,7 @@ func fmtSub(sub *Sub) string {
 	s = strings.Replace(s, "<i>", "", -1)
 	s = strings.Replace(s, "</i>", "", -1)
 	s = strings.Replace(s, `{\an8}`, "", -1)
+	s = strings.Replace(s, `"`, "&quot", -1)
 	s = spacesRegexp.ReplaceAllString(s, " ")
 	s = spanRegexp.ReplaceAllString(s, "")
 	s = strings.TrimSpace(s)
@@ -180,7 +181,6 @@ func ankiImage(imagefile string) string { return fmt.Sprintf(`<img src="%s">`, i
 // audio
 // orig text
 // trans text
-// google trans text (placeholder for python)
 // [jyutping]
 func writeFlashcards(f io.Writer, subs, xsubs Subs) {
 	for i, item := range subs.Sub {
@@ -190,10 +190,9 @@ func writeFlashcards(f io.Writer, subs, xsubs Subs) {
 			ankiSound(clipName(i, item)),
 			fmtSub(item),
 			fmtSubs(xitems),
-			"", // google trans placeholder
 		}
 		if *jp {
-			cols = append(cols, strings.Replace(jyutping.Convert(fmtSub(item)), "  ", " ", -1), "\t")
+			cols = append(cols, strings.Replace(jyutping.Convert(fmtSub(item)), "  ", " ", -1))
 		}
 		fmt.Fprintln(f, strings.Join(cols, "\t"))
 	}
