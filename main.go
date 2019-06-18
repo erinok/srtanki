@@ -23,7 +23,8 @@ var (
 	jp          = flag.Bool("jp", false, "write jyutping romanization of srt")
 	xbefore     = flag.Duration("xbefore", 500*time.Millisecond, "include `DUR` time before each audio clip")
 	xafter      = flag.Duration("xafter", 2000*time.Millisecond, "include `DUR` time after each audio clip")
-	maxmergegap = flag.Duration("maxMergeGap", 2*time.Second, "allow subtitles that are part of the same sentence to be merged if gap between them is less than `DURATION`")
+	noMerge = flag.Bool("noMerge", false, "don't merge subtitles")
+	maxMergeGap = flag.Duration("maxMergeGap", 3*time.Second, "allow subtitles that are part of the same sentence to be merged if gap between them is less than `DURATION`")
 	imgWidth    = flag.Float64("imgwidth", 1400, "scale imgs to this width")
 	numCores    = flag.Int("numCore", 2*runtime.NumCPU(), "use up to `CORES` threads while converting audio")
 )
@@ -134,12 +135,15 @@ var allCapsRegexp = regexp.MustCompile(`^\pLu*$`)
 
 // should the two subtitles be merged?
 func shouldMerge(s, t *Sub) bool {
+	if *noMerge {
+		return false
+	}
 	a := fmtSub(s)
 	a = a[strings.LastIndexByte(a, '\n')+1:]
 	if allCapsRegexp.MatchString(a) {
 		return false
 	}
-	if t.From-s.To > *maxmergegap {
+	if t.From-s.To > *maxMergeGap {
 		return false
 	}
 	return unendedSentenceRegexp.MatchString(a)
