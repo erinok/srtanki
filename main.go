@@ -21,9 +21,10 @@ var (
 	movFile     = flag.String("mov", "", "extract mp3 clips from `MOVIE`")
 	xsrtFile    = flag.String("xsrt", "", "`SRT` translated subtitles")
 	jp          = flag.Bool("jp", false, "write jyutping romanization of srt")
+	ruby        = flag.Bool("ruby", false, "write 'chinese-support-redux'-style jyutping ruby annotations field")
 	xbefore     = flag.Duration("xbefore", 500*time.Millisecond, "include `DUR` time before each audio clip")
 	xafter      = flag.Duration("xafter", 2000*time.Millisecond, "include `DUR` time after each audio clip")
-	noMerge = flag.Bool("noMerge", false, "don't merge subtitles")
+	noMerge     = flag.Bool("noMerge", false, "don't merge subtitles")
 	maxMergeGap = flag.Duration("maxMergeGap", 3*time.Second, "allow subtitles that are part of the same sentence to be merged if gap between them is less than `DURATION`")
 	imgWidth    = flag.Float64("imgwidth", 1400, "scale imgs to this width")
 	numCores    = flag.Int("numCore", 2*runtime.NumCPU(), "use up to `CORES` threads while converting audio")
@@ -175,6 +176,12 @@ func mergeSubs(subs Subs) Subs {
 func ankiSound(soundfile string) string { return fmt.Sprintf("[sound:%s]", soundfile) }
 func ankiImage(imagefile string) string { return fmt.Sprintf(`<img src="%s">`, imagefile) }
 
+func cleanJyutping(jp string) string {
+	jp = strings.Replace(jp, "  ", " ", -1)
+	jp = strings.Replace(jp, `"`, "&quot", -1)
+	return jp
+}
+
 // outputs:
 //
 // image
@@ -182,6 +189,7 @@ func ankiImage(imagefile string) string { return fmt.Sprintf(`<img src="%s">`, i
 // orig text
 // trans text
 // [jyutping]
+// [ruby]
 func writeFlashcards(f io.Writer, subs, xsubs Subs) {
 	for i, item := range subs.Sub {
 		xitems := overlappingSubs(item, xsubs.Sub)
@@ -192,7 +200,10 @@ func writeFlashcards(f io.Writer, subs, xsubs Subs) {
 			fmtSubs(xitems),
 		}
 		if *jp {
-			cols = append(cols, strings.Replace(jyutping.Convert(fmtSub(item)), "  ", " ", -1))
+			cols = append(cols, cleanJyutping(jyutping.Convert(fmtSub(item))))
+		}
+		if *ruby {
+			cols = append(cols, jyutping.ConvertRuby(fmtSub(item)))
 		}
 		fmt.Fprintln(f, strings.Join(cols, "\t"))
 	}
