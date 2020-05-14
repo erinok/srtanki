@@ -20,7 +20,6 @@ var (
 	srtFile     = flag.String("srt", "", "`SRT` subtitles of movie's spoken audio")
 	movFile     = flag.String("mov", "", "extract mp3 clips from `MOVIE`")
 	xsrtFile    = flag.String("xsrt", "", "`SRT` translated subtitles")
-	ez          = flag.Bool("ez", "", "guess values for -mov -srt and -xsrt")
 	jp          = flag.Bool("jp", false, "write jyutping romanization of srt")
 	ruby        = flag.Bool("ruby", false, "write 'chinese-support-redux'-style jyutping ruby annotations field")
 	xbefore     = flag.Duration("xbefore", 500*time.Millisecond, "include `DUR` time before each audio clip")
@@ -222,28 +221,6 @@ func ezMovFile() string {
 		fatal("ambiguous movie -- >1 .mov files")
 	}
 	return ff[0]
-}
-
-func guessNativeLang() string {
-
-}
-
-func ezSrtFile() string {
-	ff, err := filepath.Glob("*.srt")
-	if err != nil {
-		fatal(err)
-	}
-	if len(ff) == 0 {
-		fatal("no matching .srt files")
-	}
-	lang
-	return ff[0]
-}
-
-func doEZ() {
-	*movFile = ezMovFile()
-	*xsrtFile = ezXsrtFile()
-	*srtFile = ezSrtFile(*xsrtFile)
 }
 
 func main() {
