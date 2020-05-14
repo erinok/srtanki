@@ -21,13 +21,16 @@ var (
 	movFile     = flag.String("mov", "", "extract mp3 clips from `MOVIE`")
 	xsrtFile    = flag.String("xsrt", "", "`SRT` translated subtitles")
 	jp          = flag.Bool("jp", false, "write jyutping romanization of srt")
-	ruby        = flag.Bool("ruby", false, "write 'chinese-support-redux'-style jyutping ruby annotations field")
+	ruby        = flag.Bool("ruby", false, "write jyutping ruby annotations")
+	colorize    = flag.Bool("colorize", false, "write chinese characters wrapped in tone spans (which can be drawn in colors in anki)")
 	xbefore     = flag.Duration("xbefore", 500*time.Millisecond, "include `DUR` time before each audio clip")
 	xafter      = flag.Duration("xafter", 2000*time.Millisecond, "include `DUR` time after each audio clip")
 	noMerge     = flag.Bool("noMerge", false, "don't merge subtitles")
 	maxMergeGap = flag.Duration("maxMergeGap", 3*time.Second, "allow subtitles that are part of the same sentence to be merged if gap between them is less than `DURATION`")
 	imgWidth    = flag.Float64("imgwidth", 1400, "scale imgs to this width")
 	numCores    = flag.Int("numCore", 2*runtime.NumCPU(), "use up to `CORES` threads while converting audio")
+
+	canto = flag.Bool("canto", false, "alias for -jp -ruby -colorize -noMerge")
 )
 
 var mediaDir, movName string
@@ -190,6 +193,7 @@ func cleanJyutping(jp string) string {
 // trans text
 // [jyutping]
 // [ruby]
+// [origcolor]
 func writeFlashcards(f io.Writer, subs, xsubs Subs) {
 	for i, item := range subs.Sub {
 		xitems := overlappingSubs(item, xsubs.Sub)
@@ -204,6 +208,10 @@ func writeFlashcards(f io.Writer, subs, xsubs Subs) {
 		}
 		if *ruby {
 			cols = append(cols, jyutping.ConvertRuby(fmtSub(item)))
+		}
+		if *colorize {
+			cols = append(cols, jyutping.ColorizeChars(fmtSub(item)))
+			// cols = append(cols, "test")
 		}
 		fmt.Fprintln(f, strings.Join(cols, "\t"))
 	}
@@ -228,6 +236,13 @@ func main() {
 	if *movFile == "" || *srtFile == "" || *xsrtFile == "" {
 		fatal("must pass -mov, -srt, and -xsrt")
 	}
+	if *canto {
+		*jp = true
+		*ruby = true
+		*colorize = true
+		*noMerge = true
+	}
+	
 	mediaDir, movName = filepath.Split(*movFile)
 	mediaDir += "media/"
 	if err := os.MkdirAll(mediaDir, 0777); err != nil {
