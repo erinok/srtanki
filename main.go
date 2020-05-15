@@ -105,7 +105,9 @@ var newlineRegexp = regexp.MustCompile(`
 
 func fmtSub(sub *Sub) string {
 	s := strings.Join(sub.Lines, "\n")
-	s = newlineRegexp.ReplaceAllString(s, " $1")
+	if !*noMerge {
+		s = newlineRegexp.ReplaceAllString(s, " $1")
+	}
 	s = strings.Replace(s, "\n", "<br/>", -1)
 	s = strings.Replace(s, "\t", " ", -1)
 	s = strings.Replace(s, "<i>", "", -1)
@@ -114,6 +116,12 @@ func fmtSub(sub *Sub) string {
 	s = strings.Replace(s, `"`, "&quot", -1)
 	s = spacesRegexp.ReplaceAllString(s, " ")
 	s = spanRegexp.ReplaceAllString(s, "")
+	s = strings.TrimSpace(s)
+	return s
+}
+
+func gentleFmtSub(sub *Sub) string {
+	s := strings.Join(sub.Lines, "\n")
 	s = strings.TrimSpace(s)
 	return s
 }
@@ -207,7 +215,7 @@ func writeFlashcards(f io.Writer, subs, xsubs Subs) {
 			cols = append(cols, cleanJyutping(jyutping.Convert(fmtSub(item))))
 		}
 		if *ruby {
-			cols = append(cols, jyutping.ConvertRuby(fmtSub(item)))
+			cols = append(cols, jyutping.ConvertRuby(gentleFmtSub(item)))
 		}
 		if *colorize {
 			cols = append(cols, jyutping.ColorizeChars(fmtSub(item)))
