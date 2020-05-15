@@ -1,2 +1,4 @@
 github.com/erinok/jyutping v0.0.0-20190619005243-13faa24aaf68 h1:tLYLeVyTuU+F2tiC7A+E3MUd2lxm513QcRNFZlCCw9Y=
 github.com/erinok/jyutping v0.0.0-20190619005243-13faa24aaf68/go.mod h1:bbJvVFyFJ2+Ga1MFd3jshE1vkuNiWmZ4bEysJg4iNhE=
+github.com/erinok/jyutping v0.0.0-20200515014313-4507337cb68f h1:nA2tnPxC54j2nw8C+xl6osrfH5qTchhxHFGsNOmOvzQ=
+github.com/erinok/jyutping v0.0.0-20200515014313-4507337cb68f/go.mod h1:/JyGFeQ/YVIVwsG1BEqo0R31phLP+hkWzQidaCG+ycE=
