@@ -16,10 +16,12 @@ import (
 	"github.com/erinok/jyutping"
 )
 
+// TODO xml support
+
 var (
-	srtFile     = flag.String("srt", "", "`SRT` subtitles of movie's spoken audio")
+	subsFile    = flag.String("sub", "", "spoken-audio subtitles [.srt or .xml]")
+	xsubsFile   = flag.String("xsub", "", "translated subtitles [.srt or .xml]")
 	movFile     = flag.String("mov", "", "extract mp3 clips from `MOVIE`")
-	xsrtFile    = flag.String("xsrt", "", "`SRT` translated subtitles")
 	jp          = flag.Bool("jp", false, "write jyutping romanization of srt")
 	ruby        = flag.Bool("ruby", false, "write jyutping ruby annotations")
 	colorize    = flag.Bool("colorize", false, "write chinese characters wrapped in tone spans (which can be drawn in colors in anki)")
@@ -241,7 +243,7 @@ func ezMovFile() string {
 
 func main() {
 	flag.Parse()
-	if *movFile == "" || *srtFile == "" || *xsrtFile == "" {
+	if *movFile == "" || *subsFile == "" || *xsubsFile == "" {
 		fatal("must pass -mov, -srt, and -xsrt")
 	}
 	if *canto {
@@ -250,17 +252,17 @@ func main() {
 		*colorize = true
 		*noMerge = true
 	}
-	
+
 	mediaDir, movName = filepath.Split(*movFile)
 	mediaDir += "media/"
 	if err := os.MkdirAll(mediaDir, 0777); err != nil {
 		fatal("could not create media directory:", err)
 	}
-	subs, err := ReadSRTFile(*srtFile)
+	subs, err := ReadSubsFile(*subsFile)
 	if err != nil {
 		fatal(err)
 	}
-	xsubs, err := ReadSRTFile(*xsrtFile)
+	xsubs, err := ReadSubsFile(*xsubsFile)
 	if err != nil {
 		fatal(err)
 	}

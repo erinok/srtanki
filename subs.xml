@@ -1,0 +1,748 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tt ttp:contentProfiles="http://www.w3.org/ns/ttml/profile/imsc1.1/text" xmlns="http://www.w3.org/ns/ttml" xmlns:nttm="http://www.netflix.com/ns/ttml#metadata" xmlns:tt="http://www.w3.org/ns/ttml" xmlns:ttp="http://www.w3.org/ns/ttml#parameter" xmlns:tts="http://www.w3.org/ns/ttml#styling" xmlns:xml="http://www.w3.org/XML/1998/namespace" ttp:tickRate="10000000" ttp:timeBase="media" xml:lang="zh-Hant">
+<head>
+<metadata nttm:movieID="81050434" nttm:packageID="1522025" nttm:schemaVersion="0" nttm:textType="SUBS" nttm:uuid="db256670-7589-41bc-943b-45c7d75611d9"/>
+<styling>
+<initial tts:backgroundColor="transparent" tts:color="white" tts:displayAlign="after" tts:extent="80.000% 80.000%" tts:fontSize="6.000rh" tts:opacity="1.000" tts:origin="10.000% 10.000%" tts:showBackground="whenActive" tts:textAlign="center" tts:textOutline="black 0.250rh" tts:writingMode="lrtb"/>
+<style xml:id="style0" tts:fontWeight="normal"/>
+</styling>
+<layout>
+<region xml:id="region0" tts:displayAlign="after" tts:extent="80.000% 80.000%" tts:origin="10.000% 10.000%"/>
+<region xml:id="region1" tts:displayAlign="before" tts:extent="80.000% 80.000%" tts:origin="10.000% 10.000%"/>
+</layout>
+</head>
+<body>
+<div>
+<p xml:id="subtitle1" begin="112000000t" end="147200000t" region="region0" style="style0">（動物傳心，究竟行不行？）</p>
+<p xml:id="subtitle2" begin="158000000t" end="180800000t" region="region0" style="style0">
+（興奮女友種草莓
+<br/>
+17歲少年中風死）
+</p>
+<p xml:id="subtitle3" begin="204800000t" end="230000000t" region="region0" style="style0">
+（少女、白領女性、大專生
+<br/>
+都當兼職女友，原因是寂寞）
+</p>
+<p xml:id="subtitle4" begin="299600000t" end="330000000t" region="region0" style="style0">
+（猴急男女大街打野戰
+<br/>
+香港嘉亨灣活春宮，網路瘋傳）
+</p>
+<p xml:id="subtitle5" begin="479600000t" end="511200000t" region="region0" style="style0">
+（出租雙層床床位
+<br/>
+最貴月租一千九百元）
+</p>
+<p xml:id="subtitle6" begin="512000000t" end="535600000t" region="region0" style="style0">
+（一再光顧同一按摩師
+<br/>
+“對她有感情，但我沒沉淪”）
+</p>
+<p xml:id="subtitle7" begin="866800000t" end="878000000t" region="region0" style="style0">怎麼了？</p>
+<p xml:id="subtitle8" begin="889600000t" end="902800000t" region="region0" style="style0">妳怎麼了？</p>
+<p xml:id="subtitle9" begin="920400000t" end="938800000t" region="region0" style="style0">跟家興分手這麼久了</p>
+<p xml:id="subtitle10" begin="940400000t" end="952400000t" region="region0" style="style0">還是很不開心嗎？</p>
+<p xml:id="subtitle11" begin="953200000t" end="966400000t" region="region0" style="style0">我沒事</p>
+<p xml:id="subtitle12" begin="969200000t" end="982400000t" region="region0" style="style0">這個臭小子</p>
+<p xml:id="subtitle13" begin="983200000t" end="997600000t" region="region0" style="style0">真的不值得幫他</p>
+<p xml:id="subtitle14" begin="1011200000t" end="1022800000t" region="region0" style="style0">妳真的沒事？</p>
+<p xml:id="subtitle15" begin="1033600000t" end="1049600000t" region="region0" style="style0">我沒事啊，爸</p>
+<p xml:id="subtitle16" begin="1056800000t" end="1074400000t" region="region0" style="style0">你的女兒有很多交往的機會</p>
+<p xml:id="subtitle17" begin="1075200000t" end="1092800000t" region="region0" style="style0">是真的嗎？</p>
+<p xml:id="subtitle18" begin="1093600000t" end="1116800000t" region="region0" style="style0">當然真的啊，你的女兒這麼漂亮</p>
+<p xml:id="subtitle19" begin="1117600000t" end="1129600000t" region="region0" style="style0">很多人追求的</p>
+<p xml:id="subtitle20" begin="1141200000t" end="1151200000t" region="region0" style="style0">話說回來</p>
+<p xml:id="subtitle21" begin="1152000000t" end="1173600000t" region="region0" style="style0">瑪莉阿姨下個星期回來</p>
+<p xml:id="subtitle22" begin="1181600000t" end="1195600000t" region="region0" style="style0">瑪莉阿姨？</p>
+<p xml:id="subtitle23" begin="1196400000t" end="1228800000t" region="region0" style="style0">以前妳小時候，住在隔壁的瑪莉阿姨</p>
+<p xml:id="subtitle24" begin="1266400000t" end="1283200000t" region="region0" style="style0">她們不是移民很久了嗎？</p>
+<p xml:id="subtitle25" begin="1284000000t" end="1296399999t" region="region0" style="style0">她說</p>
+<p xml:id="subtitle26" begin="1297200000t" end="1309199999t" region="region0" style="style0">她的兒子盧卡斯</p>
+<p xml:id="subtitle27" begin="1310000000t" end="1330000000t" region="region0" style="style0">之前顧著讀書考試</p>
+<p xml:id="subtitle28" begin="1330800000t" end="1345600000t" region="region0" style="style0">幾年沒回來了</p>
+<p xml:id="subtitle29" begin="1347600000t" end="1359600000t" region="region0" style="style0">現在升大學了</p>
+<p xml:id="subtitle30" begin="1360400000t" end="1388800000t" region="region0" style="style0">兩母子就一起回來探望親戚朋友</p>
+<p xml:id="subtitle31" begin="1391600000t" end="1402800000t" region="region0" style="style0">盧卡斯？</p>
+<p xml:id="subtitle32" begin="1406000000t" end="1427600000t" region="region0" style="style0">那個死胖子</p>
+<p xml:id="subtitle33" begin="1428400000t" end="1463600000t" region="region0" style="style0">
+他剛升中一的時候
+<br/>
+我還教過他補習呢
+</p>
+<p xml:id="subtitle34" begin="1464400000t" end="1473200000t" region="region0" style="style0">何止呢？</p>
+<p xml:id="subtitle35" begin="1474000000t" end="1490400000t" region="region0" style="style0">他小時候經常跟妳一起玩</p>
+<p xml:id="subtitle36" begin="1491200000t" end="1512800000t" region="region0" style="style0">還問我長大後可不可以娶妳</p>
+<p xml:id="subtitle37" begin="1516000000t" end="1534400000t" region="region0" style="style0">很多人想娶你的女兒啊</p>
+<p xml:id="subtitle38" begin="1535200000t" end="1546800000t" region="region0" style="style0">幹嘛擔心？</p>
+<p xml:id="subtitle39" begin="1547600000t" end="1564000000t" region="region0" style="style0">妳沒事了</p>
+<p xml:id="subtitle40" begin="1564800000t" end="1586800000t" region="region0" style="style0">放假這麼閒，陪我去接機吧</p>
+<p xml:id="subtitle41" begin="1590400000t" end="1602000000t" region="region0" style="style0">好的</p>
+<p xml:id="subtitle42" begin="1602800000t" end="1614800000t" region="region0" style="style0">媽媽開口</p>
+<p xml:id="subtitle43" begin="1615600000t" end="1628400000t" region="region0" style="style0">我一定陪妳去的</p>
+<p xml:id="subtitle44" begin="1633600000t" end="1646400000t" region="region0" style="style0">差不多到時間了</p>
+<p xml:id="subtitle45" begin="1694800000t" end="1706400000t" region="region0" style="style0">媽媽，是不是這裡？</p>
+<p xml:id="subtitle46" begin="1707200000t" end="1718400000t" region="region0" style="style0">是這裡了</p>
+<p xml:id="subtitle47" begin="1722800000t" end="1744000000t" region="region0" style="style0">瑪莉阿姨和盧卡斯這次回來</p>
+<p xml:id="subtitle48" begin="1744800000t" end="1764000000t" region="region0" style="style0">記得帶盧卡斯到處去玩玩</p>
+<p xml:id="subtitle49" begin="1764800000t" end="1775600000t" region="region0" style="style0">可以，沒問題</p>
+<p xml:id="subtitle50" begin="1776400000t" end="1791200000t" region="region0" style="style0">現在暑假這麼閒</p>
+<p xml:id="subtitle51" begin="1792000000t" end="1811200000t" region="region0" style="style0">加上玩是我的強項呢</p>
+<p xml:id="subtitle52" begin="1818800000t" end="1827200000t" region="region0" style="style0">喂</p>
+<p xml:id="subtitle53" begin="1828000000t" end="1840000000t" region="region0" style="style0">好久沒見了</p>
+<p xml:id="subtitle54" begin="1843600000t" end="1861600000t" region="region0" style="style0">
+-謝謝妳來接機
+<br/>
+-妳好，艾美姐姐
+</p>
+<p xml:id="subtitle55" begin="1862400000t" end="1872400000t" region="region0" style="style0">妳好，貝莉阿姨</p>
+<p xml:id="subtitle56" begin="1873200000t" end="1885200000t" region="region0" style="style0">妳好，瑪莉阿姨</p>
+<p xml:id="subtitle57" begin="1892800000t" end="1914400000t" region="region0" style="style0">沒見幾年，艾美更漂亮了</p>
+<p xml:id="subtitle58" begin="1918800000t" end="1934000000t" region="region0" style="style0">都差不多吧</p>
+<p xml:id="subtitle59" begin="1936400000t" end="1951600000t" region="region0" style="style0">盧卡斯就完全不同了</p>
+<p xml:id="subtitle60" begin="1952400000t" end="1965200000t" region="region0" style="style0">沒見幾年而已</p>
+<p xml:id="subtitle61" begin="1966000000t" end="1986400000t" region="region0" style="style0">高了這麼多，又帥</p>
+<p xml:id="subtitle62" begin="1987200000t" end="2000400000t" region="region0" style="style0">我喜歡打籃球</p>
+<p xml:id="subtitle63" begin="2001200000t" end="2013600000t" region="region0" style="style0">所以高了一點點</p>
+<p xml:id="subtitle64" begin="2014400000t" end="2024800000t" region="region0" style="style0">別讚壞他了</p>
+<p xml:id="subtitle65" begin="2025600000t" end="2042800000t" region="region0" style="style0">傻孩子剛剛才失戀</p>
+<p xml:id="subtitle66" begin="2043600000t" end="2054000000t" region="region0" style="style0">媽</p>
+<p xml:id="subtitle67" begin="2054800000t" end="2073200000t" region="region0" style="style0">艾美，妳給他介紹女生吧</p>
+<p xml:id="subtitle68" begin="2076000000t" end="2099600000t" region="region0" style="style0">好的，不如我們先回酒店吧</p>
+<p xml:id="subtitle69" begin="2109600000t" end="2121600000t" region="region0" style="style0">怎樣？累嗎？</p>
+<p xml:id="subtitle70" begin="2122400000t" end="2130800000t" region="region0" style="style0">累啊</p>
+<p xml:id="subtitle71" begin="2131600000t" end="2140800000t" region="region0" style="style0">我幫你吧</p>
+<p xml:id="subtitle72" begin="2141600000t" end="2153200000t" region="region0" style="style0">不用了，可以啊</p>
+<p xml:id="subtitle73" begin="2154000000t" end="2172000000t" region="region0" style="style0">
+-真的不用？
+<br/>
+-嗯，謝謝
+</p>
+<p xml:id="subtitle74" begin="2190800000t" end="2205600000t" region="region0" style="style0">很久沒見了，艾美姐姐</p>
+<p xml:id="subtitle75" begin="2206400000t" end="2217200000t" region="region0" style="style0">真的，很久沒見</p>
+<p xml:id="subtitle76" begin="2220000000t" end="2252000000t" region="region0" style="style0">你以前是個小胖子，現在高了這麼多</p>
+<p xml:id="subtitle77" begin="2262800000t" end="2277600000t" region="region0" style="style0">那是很久以前的事了</p>
+<p xml:id="subtitle78" begin="2289600000t" end="2313200000t" region="region0" style="style0">你平時是不是很少打扮的？</p>
+<p xml:id="subtitle79" begin="2331200000t" end="2349200000t" region="region0" style="style0">可能我喜歡做運動</p>
+<p xml:id="subtitle80" begin="2353200000t" end="2366000000t" region="region0" style="style0">穿得比較隨意</p>
+<p xml:id="subtitle81" begin="2380800000t" end="2400000000t" region="region0" style="style0">剛下機應該沒事幹吧？</p>
+<p xml:id="subtitle82" begin="2400800000t" end="2417600000t" region="region0" style="style0">不如今晚出去喝一杯吧？</p>
+<p xml:id="subtitle83" begin="2425600000t" end="2434000000t" region="region0" style="style0">好啊</p>
+<p xml:id="subtitle84" begin="2596400000t" end="2605199999t" region="region0" style="style0">喂</p>
+<p xml:id="subtitle85" begin="2608000000t" end="2616400000t" region="region0" style="style0">這裡啊</p>
+<p xml:id="subtitle86" begin="2617200000t" end="2632000000t" region="region0" style="style0">妳好，艾美姐姐</p>
+<p xml:id="subtitle87" begin="2639200000t" end="2653600000t" region="region0" style="style0">不要再叫我姐姐了</p>
+<p xml:id="subtitle88" begin="2658000000t" end="2674800000t" region="region0" style="style0">好的，對不起，我遲了</p>
+<p xml:id="subtitle89" begin="2677200000t" end="2687200000t" region="region0" style="style0">為什麼這麼遲？</p>
+<p xml:id="subtitle90" begin="2690800000t" end="2704800000t" region="region0" style="style0">沒什麼，有點堵車</p>
+<p xml:id="subtitle91" begin="2708800000t" end="2722000000t" region="region0" style="style0">好吧…</p>
+<p xml:id="subtitle92" begin="2722800000t" end="2734400000t" region="region0" style="style0">替你點了酒</p>
+<p xml:id="subtitle93" begin="2735200000t" end="2743600000t" region="region0" style="style0">謝謝</p>
+<p xml:id="subtitle94" begin="2747600000t" end="2756400000t" region="region0" style="style0">乾杯</p>
+<p xml:id="subtitle95" begin="2812800000t" end="2826000000t" region="region0" style="style0">你最近怎樣啊？</p>
+<p xml:id="subtitle96" begin="2836800000t" end="2853200000t" region="region0" style="style0">沒什麼，我在倫敦讀書</p>
+<p xml:id="subtitle97" begin="2855200000t" end="2872000000t" region="region0" style="style0">不過很久沒回來香港了</p>
+<p xml:id="subtitle98" begin="2884400000t" end="2892800000t" region="region0" style="style0">對了</p>
+<p xml:id="subtitle99" begin="2894400000t" end="2915200000t" region="region0" style="style0">瑪莉阿姨說你失戀了</p>
+<p xml:id="subtitle100" begin="2924800000t" end="2936000000t" region="region0" style="style0">被女生甩嗎？</p>
+<p xml:id="subtitle101" begin="2965200000t" end="2977600000t" region="region0" style="style0">交往了四年</p>
+<p xml:id="subtitle102" begin="2982000000t" end="2996800000t" region="region0" style="style0">原來說分手就分手</p>
+<p xml:id="subtitle103" begin="3003200000t" end="3014400000t" region="region0" style="style0">我也是啊</p>
+<p xml:id="subtitle104" begin="3016400000t" end="3028800000t" region="region0" style="style0">交往了六年</p>
+<p xml:id="subtitle105" begin="3031600000t" end="3044400000t" region="region0" style="style0">不過我甩了他</p>
+<p xml:id="subtitle106" begin="3054400000t" end="3064000000t" region="region0" style="style0">發生了什麼事？</p>
+<p xml:id="subtitle107" begin="3081200000t" end="3096400000t" region="region0" style="style0">我男朋友偷吃</p>
+<p xml:id="subtitle108" begin="3097200000t" end="3110400000t" region="region0" style="style0">不止一次了</p>
+<p xml:id="subtitle109" begin="3111600000t" end="3131200000t" region="region0" style="style0">我們之前說去泰國旅遊</p>
+<p xml:id="subtitle110" begin="3134800000t" end="3144800000t" region="region0" style="style0">你知道嗎？</p>
+<p xml:id="subtitle111" begin="3145600000t" end="3173600000t" region="region0" style="style0">他前一晚帶女同事回家上床</p>
+<p xml:id="subtitle112" begin="3176000000t" end="3194000000t" region="region0" style="style0">還弄得整個脖子都是“咖喱雞”</p>
+<p xml:id="subtitle113" begin="3196400000t" end="3230400000t" region="region0" style="style0">還傻到用熨斗熨自己的脖子</p>
+<p xml:id="subtitle114" begin="3235200000t" end="3248000000t" region="region0" style="style0">他以為他能騙到我嗎？</p>
+<p xml:id="subtitle115" begin="3255200000t" end="3269200000t" region="region0" style="style0">算了，我甩掉他了</p>
+<p xml:id="subtitle116" begin="3276400000t" end="3287200000t" region="region0" style="style0">你呢？</p>
+<p xml:id="subtitle117" begin="3322000000t" end="3345600000t" region="region0" style="style0">我跟女朋友交往了四年</p>
+<p xml:id="subtitle118" begin="3355200000t" end="3380000000t" region="region0" style="style0">對不起，前任女友才對</p>
+<p xml:id="subtitle119" begin="3396400000t" end="3414800000t" region="region0" style="style0">我們當時在宿舍裡認識</p>
+<p xml:id="subtitle120" begin="3422400000t" end="3433600000t" region="region0" style="style0">她很外向</p>
+<p xml:id="subtitle121" begin="3443200000t" end="3454400000t" region="region0" style="style0">又很開朗</p>
+<p xml:id="subtitle122" begin="3466800000t" end="3499600000t" region="region0" style="style0">但後來被我發現她跟我好友在一起了</p>
+<p xml:id="subtitle123" begin="3534000000t" end="3544400000t" region="region0" style="style0">不要灰心</p>
+<p xml:id="subtitle124" begin="3545200000t" end="3575600000t" region="region0" style="style0">
+怎樣看都好
+<br/>
+你的樣貌都比你的好友好看
+</p>
+<p xml:id="subtitle125" begin="3579200000t" end="3594000000t" region="region0" style="style0">妳又知道他樣貌如何？</p>
+<p xml:id="subtitle126" begin="3597200000t" end="3610400000t" region="region0" style="style0">我不知道的</p>
+<p xml:id="subtitle127" begin="3611200000t" end="3627600000t" region="region0" style="style0">我覺得你挺帥氣的</p>
+<p xml:id="subtitle128" begin="3637600000t" end="3672800000t" region="region0" style="style0">我今天就帶你來這裡泡女生</p>
+<p xml:id="subtitle129" begin="3683600000t" end="3708400000t" region="region0" style="style0">喂，你看看後方戴眼鏡的女生</p>
+<p xml:id="subtitle130" begin="3723600000t" end="3733200000t" region="region0" style="style0">可以嗎？</p>
+<p xml:id="subtitle131" begin="3780400000t" end="3803600000t" region="region0" style="style0">但香港女生會不會很難接觸的？</p>
+<p xml:id="subtitle132" begin="3807600000t" end="3823200000t" region="region0" style="style0">怎麼會呢？</p>
+<p xml:id="subtitle133" begin="3824000000t" end="3856800000t" region="region0" style="style0">香港女生最喜歡你們這些英籍華人</p>
+<p xml:id="subtitle134" begin="3860800000t" end="3882000000t" region="region0" style="style0">說起話來會有口音</p>
+<p xml:id="subtitle135" begin="3884800000t" end="3904400000t" region="region0" style="style0">她們會覺得很棒</p>
+<p xml:id="subtitle136" begin="3911600000t" end="3951200000t" region="region0" style="style0">真的，她們會覺得英籍華人都很迷人</p>
+<p xml:id="subtitle137" begin="3952000000t" end="3988400000t" region="region0" style="style0">
+有時說話會彈出幾句英文詞
+<br/>
+像“好啊”、“對啊”
+</p>
+<p xml:id="subtitle138" begin="3989200000t" end="4010800000t" region="region0" style="style0">她們會覺得很歡鬧的</p>
+<p xml:id="subtitle139" begin="4020000000t" end="4032000000t" region="region0" style="style0">但是呢</p>
+<p xml:id="subtitle140" begin="4032800000t" end="4054400000t" region="region0" style="style0">我現在跟媽媽一起住在酒店</p>
+<p xml:id="subtitle141" begin="4059600000t" end="4073600000t" region="region0" style="style0">好像不太方便</p>
+<p xml:id="subtitle142" begin="4079200000t" end="4094800000t" region="region0" style="style0">你這麼快就想到這一步了？</p>
+<p xml:id="subtitle143" begin="4114000000t" end="4131200000t" region="region0" style="style0">其實你可以去開房的</p>
+<p xml:id="subtitle144" begin="4134800000t" end="4162400000t" region="region0" style="style0">但是不要去“百佳”、“維多利亞”</p>
+<p xml:id="subtitle145" begin="4163200000t" end="4180400000t" region="region0" style="style0">這麼普通的地方</p>
+<p xml:id="subtitle146" begin="4181200000t" end="4193200000t" region="region0" style="style0">九龍塘吧</p>
+<p xml:id="subtitle147" begin="4198400000t" end="4214400000t" region="region0" style="style0">女生會覺得挺有氣氛</p>
+<p xml:id="subtitle148" begin="4218000000t" end="4228000000t" region="region0" style="style0">九龍塘？</p>
+<p xml:id="subtitle149" begin="4228800000t" end="4261200000t" region="region0" style="style0">九龍塘有很多路名都跟英國有關</p>
+<p xml:id="subtitle150" begin="4276000000t" end="4296000000t" region="region0" style="style0">森麻實道</p>
+<p xml:id="subtitle151" begin="4296800000t" end="4314400000t" region="region0" style="style0">根德道</p>
+<p xml:id="subtitle152" begin="4315200000t" end="4337600000t" region="region0" style="style0">還有牛津道</p>
+<p xml:id="subtitle153" begin="4338400000t" end="4360800000t" region="region0" style="style0">她們會覺得很棒的</p>
+<p xml:id="subtitle154" begin="4368800000t" end="4378800000t" region="region0" style="style0">這樣也行？</p>
+<p xml:id="subtitle155" begin="4384800000t" end="4396400000t" region="region0" style="style0">你試試幻想</p>
+<p xml:id="subtitle156" begin="4397200000t" end="4423600000t" region="region0" style="style0">當你帶着女生經過酒店的時候</p>
+<p xml:id="subtitle157" begin="4424400000t" end="4442000000t" region="region0" style="style0">你會見到歌和老街</p>
+<p xml:id="subtitle158" begin="4447600000t" end="4456800000t" region="region0" style="style0">你就說</p>
+<p xml:id="subtitle159" begin="4459600000t" end="4483600000t" region="region0" style="style0">“歌和老街，我經常去的</p>
+<p xml:id="subtitle160" begin="4484400000t" end="4499600000t" region="region0" style="style0">不過是英國的那個”</p>
+<p xml:id="subtitle161" begin="4513600000t" end="4526800000t" region="region0" style="style0">之後你就說</p>
+<p xml:id="subtitle162" begin="4527600000t" end="4569200000t" region="region0" style="style0">
+“我每年夏天都會駕車
+<br/>
+去看星和看海”
+</p>
+<p xml:id="subtitle163" begin="4570000000t" end="4584400000t" region="region0" style="style0">女生聽到你這樣說</p>
+<p xml:id="subtitle164" begin="4585200000t" end="4600400000t" region="region0" style="style0">肯定比大西洋還濕呢</p>
+<p xml:id="subtitle165" begin="4601200000t" end="4612000000t" region="region0" style="style0">所以呢</p>
+<p xml:id="subtitle166" begin="4612800000t" end="4627600000t" region="region0" style="style0">上床最重要的是床</p>
+<p xml:id="subtitle167" begin="4628400000t" end="4651200000t" region="region0" style="style0">開房最重要的是九龍塘</p>
+<p xml:id="subtitle168" begin="4668800000t" end="4691600000t" region="region0" style="style0">女生們真的是這麼開放的嗎？</p>
+<p xml:id="subtitle169" begin="4692400000t" end="4717600000t" region="region0" style="style0">蘭桂芳沒聖人，女生一定開放</p>
+<p xml:id="subtitle170" begin="4722400000t" end="4747200000t" region="region0" style="style0">女生的矜持都是假裝出來的</p>
+<p xml:id="subtitle171" begin="4748000000t" end="4756800000t" region="region0" style="style0">去玩的話</p>
+<p xml:id="subtitle172" begin="4757600000t" end="4777200000t" region="region0" style="style0">你覺得那些女生會穿著保守嗎？</p>
+<p xml:id="subtitle173" begin="4783600000t" end="4794800000t" region="region0" style="style0">妳說話還真多押韻</p>
+<p xml:id="subtitle174" begin="4795600000t" end="4806800000t" region="region0" style="style0">你少理</p>
+<p xml:id="subtitle175" begin="4807600000t" end="4820400000t" region="region0" style="style0">最緊要是有道理</p>
+<p xml:id="subtitle176" begin="4841600000t" end="4853600000t" region="region0" style="style0">但是呢</p>
+<p xml:id="subtitle177" begin="4859200000t" end="4882400000t" region="region0" style="style0">你的裝扮並不是很行</p>
+<p xml:id="subtitle178" begin="4890800000t" end="4910000000t" region="region0" style="style0">不如我幫你改裝一下，好嗎？</p>
+<p xml:id="subtitle179" begin="4928000000t" end="4939600000t" region="region0" style="style0">改裝一下？</p>
+<p xml:id="subtitle180" begin="4956400000t" end="4969600000t" region="region0" style="style0">還有一些時間</p>
+<p xml:id="subtitle181" begin="4975600000t" end="4987600000t" region="region0" style="style0">好，走了</p>
+<p xml:id="subtitle182" begin="4994800000t" end="5003600000t" region="region0" style="style0">去哪裡？</p>
+<p xml:id="subtitle183" begin="5006800000t" end="5018800000t" region="region0" style="style0">改裝一下</p>
+<p xml:id="subtitle184" begin="5036000000t" end="5045600000t" region="region0" style="style0">走吧</p>
+<p xml:id="subtitle185" begin="5056800000t" end="5068400000t" region="region0" style="style0">走吧</p>
+<p xml:id="subtitle186" begin="5253600000t" end="5264800000t" region="region0" style="style0">挺好啊</p>
+<p xml:id="subtitle187" begin="5265600000t" end="5279600000t" region="region0" style="style0">剛才有女生盯著你看</p>
+<p xml:id="subtitle188" begin="5285600000t" end="5300400000t" region="region0" style="style0">是嗎？我都不覺得呢</p>
+<p xml:id="subtitle189" begin="5301200000t" end="5316000000t" region="region0" style="style0">我看到了</p>
+<p xml:id="subtitle190" begin="5318000000t" end="5338400000t" region="region0" style="style0">麻煩你，兩杯威士忌加冰</p>
+<p xml:id="subtitle191" begin="5365600000t" end="5386800000t" region="region0" style="style0">對啊，這樣穿挺好的</p>
+<p xml:id="subtitle192" begin="5387600000t" end="5406800000t" region="region0" style="style0">不要再戴那頂呆呆的帽子</p>
+<p xml:id="subtitle193" begin="5411600000t" end="5428400000t" region="region0" style="style0">那頂帽子很有紀念價值的</p>
+<p xml:id="subtitle194" begin="5429200000t" end="5449200000t" region="region0" style="style0">什麼？前任送你的？</p>
+<p xml:id="subtitle195" begin="5450000000t" end="5460400000t" region="region0" style="style0">不是</p>
+<p xml:id="subtitle196" begin="5465200000t" end="5480000000t" region="region0" style="style0">我的好友送給我的</p>
+<p xml:id="subtitle197" begin="5485600000t" end="5500000000t" region="region0" style="style0">他媽的把它扔掉吧！</p>
+<p xml:id="subtitle198" begin="5500800000t" end="5513200000t" region="region0" style="style0">幹</p>
+<p xml:id="subtitle199" begin="5523200000t" end="5537600000t" region="region0" style="style0">你好，帥哥</p>
+<p xml:id="subtitle200" begin="5538400000t" end="5550800000t" region="region0" style="style0">請你喝一杯吧</p>
+<p xml:id="subtitle201" begin="5558000000t" end="5572400000t" region="region0" style="style0">不用了，我有喝的了</p>
+<p xml:id="subtitle202" begin="5573200000t" end="5582000000t" region="region0" style="style0">謝謝</p>
+<p xml:id="subtitle203" begin="5582800000t" end="5595200000t" region="region0" style="style0">好的，沒關係</p>
+<p xml:id="subtitle204" begin="5625200000t" end="5642400000t" region="region0" style="style0">喂，你是不是傻了？</p>
+<p xml:id="subtitle205" begin="5648000000t" end="5661200000t" region="region0" style="style0">我做錯了什麼？</p>
+<p xml:id="subtitle206" begin="5662000000t" end="5673200000t" region="region0" style="style0">那女生挺好看的</p>
+<p xml:id="subtitle207" begin="5674000000t" end="5691600000t" region="region0" style="style0">她叫你喝就喝吧</p>
+<p xml:id="subtitle208" begin="5753200000t" end="5773200000t" region="region0" style="style0">其實你是不是來認識女生的？</p>
+<p xml:id="subtitle209" begin="5790000000t" end="5799600000t" region="region0" style="style0">是的</p>
+<p xml:id="subtitle210" begin="5813600000t" end="5822800000t" region="region0" style="style0">好吧</p>
+<p xml:id="subtitle211" begin="5823600000t" end="5841200000t" region="region0" style="style0">那如果真的喜歡了一個女生</p>
+<p xml:id="subtitle212" begin="5846800000t" end="5859600000t" region="region0" style="style0">那應該跟她說什麼呢？</p>
+<p xml:id="subtitle213" begin="5874800000t" end="5887200000t" region="region0" style="style0">簡單點</p>
+<p xml:id="subtitle214" begin="5888000000t" end="5900000000t" region="region0" style="style0">直接點</p>
+<p xml:id="subtitle215" begin="5900800000t" end="5909600000t" region="region0" style="style0">你跟她說</p>
+<p xml:id="subtitle216" begin="5910400000t" end="5922400000t" region="region0" style="style0">“我今晚想操妳”</p>
+<p xml:id="subtitle217" begin="5933200000t" end="5944800000t" region="region0" style="style0">這麼直接？</p>
+<p xml:id="subtitle218" begin="5945600000t" end="5958800000t" region="region0" style="style0">就是這麼直接</p>
+<p xml:id="subtitle219" begin="5959600000t" end="5979600000t" region="region0" style="style0">你現在又高又有型又帥</p>
+<p xml:id="subtitle220" begin="5980400000t" end="6006000000t" region="region0" style="style0">你說什麼都是道理</p>
+<p xml:id="subtitle221" begin="6014000000t" end="6023600000t" region="region0" style="style0">我怕會被人打</p>
+<p xml:id="subtitle222" begin="6024400000t" end="6046000000t" region="region0" style="style0">不會的，你信我吧</p>
+<p xml:id="subtitle223" begin="6101600000t" end="6111200000t" region="region0" style="style0">喂…</p>
+<p xml:id="subtitle224" begin="6120800000t" end="6138000000t" region="region0" style="style0">那個女生挺不錯的</p>
+<p xml:id="subtitle225" begin="6151600000t" end="6160000000t" region="region0" style="style0">是吧？</p>
+<p xml:id="subtitle226" begin="6160800000t" end="6171200000t" region="region0" style="style0">合不合你意？</p>
+<p xml:id="subtitle227" begin="6172000000t" end="6182400000t" region="region0" style="style0">不錯啊</p>
+<p xml:id="subtitle228" begin="6187600000t" end="6198400000t" region="region0" style="style0">去吧</p>
+<p xml:id="subtitle229" begin="6201200000t" end="6216000000t" region="region0" style="style0">
+-現在？
+<br/>
+-嗯
+</p>
+<p xml:id="subtitle230" begin="6221200000t" end="6231200000t" region="region0" style="style0">去</p>
+<p xml:id="subtitle231" begin="6234000000t" end="6242400000t" region="region0" style="style0">真的？</p>
+<p xml:id="subtitle232" begin="6243200000t" end="6255600000t" region="region0" style="style0">去吧</p>
+<p xml:id="subtitle233" begin="6263200000t" end="6279600000t" region="region0" style="style0">快一點</p>
+<p xml:id="subtitle234" begin="6298400000t" end="6309600000t" region="region0" style="style0">去吧</p>
+<p xml:id="subtitle235" begin="6362000000t" end="6372000000t" region="region0" style="style0">去吧</p>
+<p xml:id="subtitle236" begin="6415200000t" end="6423600000t" region="region0" style="style0">妳好</p>
+<p xml:id="subtitle237" begin="6435600000t" end="6446000000t" region="region0" style="style0">我是盧卡斯</p>
+<p xml:id="subtitle238" begin="6458800000t" end="6473200000t" region="region0" style="style0">妳好，莎拉</p>
+<p xml:id="subtitle239" begin="6494400000t" end="6507200000t" region="region0" style="style0">你從外國回來的嗎？</p>
+<p xml:id="subtitle240" begin="6510800000t" end="6530000000t" region="region0" style="style0">是啊，我從英國回來的</p>
+<p xml:id="subtitle241" begin="6545600000t" end="6559200000t" region="region0" style="style0">英籍華人</p>
+<p xml:id="subtitle242" begin="6561600000t" end="6574400000t" region="region0" style="style0">去吧</p>
+<p xml:id="subtitle243" begin="6607200000t" end="6624000000t" region="region0" style="style0">我今晚想…</p>
+<p xml:id="subtitle244" begin="6639200000t" end="6663600000t" region="region0" style="style0">
+-說什麼？
+<br/>
+-我今晚想操妳啊
+</p>
+<p xml:id="subtitle245" begin="6675600000t" end="6691200000t" region="region0" style="style0">我今晚想操妳</p>
+<p xml:id="subtitle246" begin="6698800000t" end="6714800000t" region="region0" style="style0">這麼直接？</p>
+<p xml:id="subtitle247" begin="6721200000t" end="6730800000t" region="region0" style="style0">是啊</p>
+<p xml:id="subtitle248" begin="6734400000t" end="6742800000t" region="region0" style="style0">好啊</p>
+<p xml:id="subtitle249" begin="6752800000t" end="6761600000t" region="region0" style="style0">來吧</p>
+<p xml:id="subtitle250" begin="6930800000t" end="6946000000t" region="region0" style="style0">這個嗎？好…</p>
+<p xml:id="subtitle251" begin="6946800000t" end="6961600000t" region="region0" style="style0">
+-去！喂！
+<br/>
+-行不行？
+</p>
+<p xml:id="subtitle252" begin="6973200000t" end="6990800000t" region="region0" style="style0">
+-又夾不到
+<br/>
+-差一點
+</p>
+<p xml:id="subtitle253" begin="6991600000t" end="7022000000t" region="region0" style="style0">
+-再來一次吧
+<br/>
+-試多一次，試試吧
+</p>
+<p xml:id="subtitle254" begin="7022800000t" end="7035600000t" region="region0" style="style0">話說回來</p>
+<p xml:id="subtitle255" begin="7036400000t" end="7064400000t" region="region0" style="style0">昨晚那女生帶你回去</p>
+<p xml:id="subtitle256" begin="7069600000t" end="7086800000t" region="region0" style="style0">應該玩得挺開心吧？</p>
+<p xml:id="subtitle257" begin="7101600000t" end="7112400000t" region="region0" style="style0">昨晚</p>
+<p xml:id="subtitle258" begin="7115200000t" end="7128000000t" region="region0" style="style0">我去了她家</p>
+<p xml:id="subtitle259" begin="7132400000t" end="7148400000t" region="region0" style="style0">厲害</p>
+<p xml:id="subtitle260" begin="7150800000t" end="7171200000t" region="region0" style="style0">教你兩招就成功吃到女生了</p>
+<p xml:id="subtitle261" begin="7177600000t" end="7193200000t" region="region0" style="style0">有沒有下文呢？</p>
+<p xml:id="subtitle262" begin="7195600000t" end="7208000000t" region="region0" style="style0">我…</p>
+<p xml:id="subtitle263" begin="7210400000t" end="7223200000t" region="region0" style="style0">向她要了電話號碼</p>
+<p xml:id="subtitle264" begin="7225200000t" end="7238400000t" region="region0" style="style0">要了她的電話號碼？</p>
+<p xml:id="subtitle265" begin="7239200000t" end="7258400000t" region="region0" style="style0">盧卡斯，你都挺厲害的</p>
+<p xml:id="subtitle266" begin="7267600000t" end="7284800000t" region="region0" style="style0">那你之後還會再約她嗎？</p>
+<p xml:id="subtitle267" begin="7290400000t" end="7303200000t" region="region0" style="style0">我不知道啊</p>
+<p xml:id="subtitle268" begin="7307600000t" end="7325200000t" region="region0" style="style0">我還沒準備好接受一段長感情</p>
+<p xml:id="subtitle269" begin="7360000000t" end="7370400000t" region="region0" style="style0">我也是</p>
+<p xml:id="subtitle270" begin="7378800000t" end="7388000000t" region="region0" style="style0">你來吧</p>
+<p xml:id="subtitle271" begin="7412400000t" end="7427200000t" region="region0" style="style0">
+-可以嗎？
+<br/>
+-嗯
+</p>
+<p xml:id="subtitle272" begin="7489600000t" end="7507200000t" region="region0" style="style0">
+-可以嗎？
+<br/>
+-其實
+</p>
+<p xml:id="subtitle273" begin="7508000000t" end="7524400000t" region="region0" style="style0">你也頗有潛質</p>
+<p xml:id="subtitle274" begin="7525200000t" end="7550400000t" region="region0" style="style0">當兼職男友</p>
+<p xml:id="subtitle275" begin="7561600000t" end="7577600000t" region="region0" style="style0">兼職男友？</p>
+<p xml:id="subtitle276" begin="7580400000t" end="7599200000t" region="region0" style="style0">男友都可以兼職的嗎？</p>
+<p xml:id="subtitle277" begin="7600000000t" end="7621600000t" region="region0" style="style0">其實兼職男友</p>
+<p xml:id="subtitle278" begin="7622400000t" end="7646400000t" region="region0" style="style0">也都是陪人逛街、看電影、吃飯</p>
+<p xml:id="subtitle279" begin="7647200000t" end="7683200000t" region="region0" style="style0">喜歡就抱一下、親一下、拉拉手</p>
+<p xml:id="subtitle280" begin="7684000000t" end="7700400000t" region="region0" style="style0">做愛做的事</p>
+<p xml:id="subtitle281" begin="7712800000t" end="7721600000t" region="region0" style="style0">還有</p>
+<p xml:id="subtitle282" begin="7724800000t" end="7746000000t" region="region0" style="style0">
+-還能賺錢
+<br/>
+-那不是當男妓嗎？
+</p>
+<p xml:id="subtitle283" begin="7749600000t" end="7776400000t" region="region0" style="style0">傻子，你可以不上床的</p>
+<p xml:id="subtitle284" begin="7778800000t" end="7802800000t" region="region0" style="style0">別人用錢買下你的時間</p>
+<p xml:id="subtitle285" begin="7805200000t" end="7822400000t" region="region0" style="style0">其實就是雙贏</p>
+<p xml:id="subtitle286" begin="7832800000t" end="7843600000t" region="region0" style="style0">讓我來</p>
+<p xml:id="subtitle287" begin="7874000000t" end="7888000000t" region="region0" style="style0">像這樣</p>
+<p xml:id="subtitle288" begin="7888800000t" end="7909200000t" region="region0" style="style0">我們在玩夾娃娃</p>
+<p xml:id="subtitle289" begin="7910000000t" end="7925200000t" region="region0" style="style0">那你正在陪我</p>
+<p xml:id="subtitle290" begin="7926000000t" end="7937600000t" region="region0" style="style0">我付錢</p>
+<p xml:id="subtitle291" begin="7938400000t" end="7953200000t" region="region0" style="style0">你抽時間</p>
+<p xml:id="subtitle292" begin="7984800000t" end="7999600000t" region="region0" style="style0">真棒</p>
+<p xml:id="subtitle293" begin="8010000000t" end="8021200000t" region="region0" style="style0">夾到娃娃</p>
+<p xml:id="subtitle294" begin="8022000000t" end="8039600000t" region="region0" style="style0">大家都開心</p>
+<p xml:id="subtitle295" begin="8082800000t" end="8108000000t" region="region0" style="style0">其實我也有當兼職女友</p>
+<p xml:id="subtitle296" begin="8136400000t" end="8162000000t" region="region0" style="style0">你不要跟我爸媽說啊</p>
+<p xml:id="subtitle297" begin="8162800000t" end="8186800000t" region="region0" style="style0">要不然你的下場就和它一樣</p>
+<p xml:id="subtitle298" begin="8229200000t" end="8240800000t" region="region0" style="style0">明不明白？</p>
+<p xml:id="subtitle299" begin="8318800000t" end="8334800000t" region="region0" style="style0">以前都試過了</p>
+<p xml:id="subtitle300" begin="8336000000t" end="8354400000t" region="region0" style="style0">我真的不太想要那些長時間的交往</p>
+<p xml:id="subtitle301" begin="8355200000t" end="8365200000t" region="region0" style="style0">很麻煩</p>
+<p xml:id="subtitle302" begin="8372400000t" end="8401600000t" region="region0" style="style0">當了幾次兼職女友</p>
+<p xml:id="subtitle303" begin="8402400000t" end="8418400000t" region="region0" style="style0">沒什麼特別</p>
+<p xml:id="subtitle304" begin="8426800000t" end="8442000000t" region="region0" style="style0">最重要有人疼</p>
+<p xml:id="subtitle305" begin="8448000000t" end="8460400000t" region="region0" style="style0">又可以賺錢</p>
+<p xml:id="subtitle306" begin="8468000000t" end="8484400000t" region="region0" style="style0">那不就是為了賺錢嗎？</p>
+<p xml:id="subtitle307" begin="8497600000t" end="8517600000t" region="region0" style="style0">這個世界上是沒有免費午餐的</p>
+<p xml:id="subtitle308" begin="8518400000t" end="8536400000t" region="region0" style="style0">所有事都是靠包裝</p>
+<p xml:id="subtitle309" begin="8552800000t" end="8568400000t" region="region0" style="style0">就像這杯咖啡一樣</p>
+<p xml:id="subtitle310" begin="8578400000t" end="8587200000t" region="region0" style="style0">但我不喝</p>
+<p xml:id="subtitle311" begin="8588000000t" end="8598000000t" region="region0" style="style0">那為什麼要點呢？</p>
+<p xml:id="subtitle312" begin="8598800000t" end="8610400000t" region="region0" style="style0">這麼漂亮</p>
+<p xml:id="subtitle313" begin="8611200000t" end="8638400000t" region="region0" style="style0">當然是拍張照貼上網求讚</p>
+<p xml:id="subtitle314" begin="8658000000t" end="8674400000t" region="region0" style="style0">那為什麼要求讚呢？</p>
+<p xml:id="subtitle315" begin="8692000000t" end="8710000000t" region="region0" style="style0">當兼職男友也好</p>
+<p xml:id="subtitle316" begin="8710800000t" end="8728800000t" region="region0" style="style0">兼職女友也好</p>
+<p xml:id="subtitle317" begin="8729600000t" end="8754000000t" region="region0" style="style0">都要拍張照貼上網求讚</p>
+<p xml:id="subtitle318" begin="8758000000t" end="8769200000t" region="region0" style="style0">打個比方</p>
+<p xml:id="subtitle319" begin="8770000000t" end="8806000000t" region="region0" style="style0">好像那些美女去游泳池游泳</p>
+<p xml:id="subtitle320" begin="8806800000t" end="8824000000t" region="region0" style="style0">你不會見到她們游泳的</p>
+<p xml:id="subtitle321" begin="8830000000t" end="8846400000t" region="region0" style="style0">她們只會展示身材</p>
+<p xml:id="subtitle322" begin="8847200000t" end="8870000000t" region="region0" style="style0">拍些性感照貼上網</p>
+<p xml:id="subtitle323" begin="8870800000t" end="8902800000t" region="region0" style="style0">然後吸引些狗公慢慢欣賞</p>
+<p xml:id="subtitle324" begin="8904000000t" end="8926000000t" region="region0" style="style0">順道吸引一下追隨者</p>
+<p xml:id="subtitle325" begin="8933600000t" end="8947200000t" region="region0" style="style0">難怪呢</p>
+<p xml:id="subtitle326" begin="8950800000t" end="8966400000t" region="region0" style="style0">我剛才在游泳池游泳</p>
+<p xml:id="subtitle327" begin="8969600000t" end="8981200000t" region="region0" style="style0">都沒人下水的</p>
+<p xml:id="subtitle328" begin="8982000000t" end="8996000000t" region="region0" style="style0">每個女生都在上傳照片</p>
+<p xml:id="subtitle329" begin="9009200000t" end="9049600000t" region="region0" style="style0">其實你的包裝再好一點</p>
+<p xml:id="subtitle330" begin="9050400000t" end="9074800000t" region="region0" style="style0">你可以吸引更多女生約你</p>
+<p xml:id="subtitle331" begin="9081200000t" end="9096400000t" region="region0" style="style0">你就可以慢慢挑</p>
+<p xml:id="subtitle332" begin="9105200000t" end="9117200000t" region="region0" style="style0">我可以慢慢挑？</p>
+<p xml:id="subtitle333" begin="9122800000t" end="9135600000t" region="region0" style="style0">挑是挑</p>
+<p xml:id="subtitle334" begin="9136400000t" end="9161200000t" region="region0" style="style0">但危險的、變態的</p>
+<p xml:id="subtitle335" begin="9170000000t" end="9199600000t" region="region0" style="style0">別做，最重要的是安全</p>
+<p xml:id="subtitle336" begin="9200400000t" end="9211600000t" region="region0" style="style0">戴避孕套</p>
+<p xml:id="subtitle337" begin="9260000000t" end="9282400000t" region="region0" style="style0">
+-幹嘛？
+<br/>
+-讓姐姐給你開個照片牆帳號
+</p>
+<p xml:id="subtitle338" begin="9292000000t" end="9310800000t" region="region0" style="style0">
+-照片牆？
+<br/>
+-是啊…
+</p>
+<p xml:id="subtitle339" begin="9313600000t" end="9334000000t" region="region0" style="style0">
+會不會不太好？
+<br/>
+別人不就會把我認出來？
+</p>
+<p xml:id="subtitle340" begin="9338400000t" end="9355600000t" region="region0" style="style0">你怎麼這麼有自信？</p>
+<p xml:id="subtitle341" begin="9366400000t" end="9385200000t" region="region0" style="style0">一定有人挑你嗎？</p>
+<p xml:id="subtitle342" begin="9389600000t" end="9404000000t" region="region0" style="style0">現在給你弄好</p>
+<p xml:id="subtitle343" begin="9411200000t" end="9423200000t" region="region0" style="style0">你多高？</p>
+<p xml:id="subtitle344" begin="9429200000t" end="9438800000t" region="region0" style="style0">187</p>
+<p xml:id="subtitle345" begin="9472000000t" end="9481200000t" region="region0" style="style0">什麼星座？</p>
+<p xml:id="subtitle346" begin="9490400000t" end="9498800000t" region="region0" style="style0">山羊座</p>
+<p xml:id="subtitle347" begin="9502400000t" end="9514800000t" region="region0" style="style0">不，山羊座不好</p>
+<p xml:id="subtitle348" begin="9515600000t" end="9527600000t" region="region0" style="style0">寫水瓶座吧</p>
+<p xml:id="subtitle349" begin="9528400000t" end="9540000000t" region="region0" style="style0">為什麼呢？</p>
+<p xml:id="subtitle350" begin="9540800000t" end="9565600000t" region="region0" style="style0">山羊座給人感覺很差</p>
+<p xml:id="subtitle351" begin="9567600000t" end="9604800000t" region="region0" style="style0">水瓶座就夠創新，古靈精怪的</p>
+<p xml:id="subtitle352" begin="9605600000t" end="9615600000t" region="region0" style="style0">那不如天蠍座吧</p>
+<p xml:id="subtitle353" begin="9616400000t" end="9636400000t" region="region0" style="style0">人們說天蠍座性方面很強的</p>
+<p xml:id="subtitle354" begin="9647200000t" end="9695600000t" region="region0" style="style0">
+是，但是天蠍座容易讓女生
+<br/>
+覺得他有機心
+</p>
+<p xml:id="subtitle355" begin="9696400000t" end="9720800000t" region="region0" style="style0">沒什麼安全感，就是危險啊</p>
+<p xml:id="subtitle356" begin="9730000000t" end="9739600000t" region="region0" style="style0">水瓶座吧</p>
+<p xml:id="subtitle357" begin="9749200000t" end="9762800000t" region="region0" style="style0">這樣好嗎？</p>
+<p xml:id="subtitle358" begin="9769600000t" end="9784400000t" region="region0" style="style0">我給你拍張照</p>
+<p xml:id="subtitle359" begin="9802400000t" end="9816000000t" region="region0" style="style0">拿着那杯咖啡</p>
+<p xml:id="subtitle360" begin="9821600000t" end="9836400000t" region="region0" style="style0">裝作文青一樣</p>
+<p xml:id="subtitle361" begin="9855600000t" end="9866400000t" region="region0" style="style0">笑</p>
+<p xml:id="subtitle362" begin="9901200000t" end="9916800000t" region="region0" style="style0">
+（兼職男友孤單盧盧
+<br/>
+要見我就給我發信息）
+</p>
+<p xml:id="subtitle363" begin="9917600000t" end="9930400000t" region="region0" style="style0">（親嘴、牽手、吃飯）</p>
+<p xml:id="subtitle364" begin="9944000000t" end="9953600000t" region="region0" style="style0">你好</p>
+<p xml:id="subtitle365" begin="9956400000t" end="9966800000t" region="region0" style="style0">妳就是瑪莉？</p>
+<p xml:id="subtitle366" begin="10091200000t" end="10103600000t" region="region0" style="style0">他能跑一整晚</p>
+<p xml:id="subtitle367" begin="10108400000t" end="10122000000t" region="region0" style="style0">你的初戀是幾時的事？</p>
+<p xml:id="subtitle368" begin="10127600000t" end="10138400000t" region="region0" style="style0">現在就是初戀</p>
+<p xml:id="subtitle369" begin="10169200000t" end="10181200000t" region="region1" style="style0">（有回應嗎？妳好）</p>
+<p xml:id="subtitle370" begin="10188400000t" end="10199200000t" region="region1" style="style0">（妳的配套、價錢和自介？）</p>
+<p xml:id="subtitle371" begin="10208800000t" end="10226400000t" region="region1" style="style0">
+（美美好，這個星期很熱很曬
+<br/>
+記住多喝點水）
+</p>
+<p xml:id="subtitle372" begin="10227200000t" end="10244000000t" region="region1" style="style0">
+（妳好，我最近不是很開心
+<br/>
+和女朋友分手了）
+</p>
+<p xml:id="subtitle373" begin="10278000000t" end="10293599999t" region="region0" style="style0">你平時在哪裡健身的？</p>
+<p xml:id="subtitle374" begin="10294400000t" end="10309200000t" region="region0" style="style0">沒有，我都在家裡健身的</p>
+<p xml:id="subtitle375" begin="10362800000t" end="10380000000t" region="region0" style="style0">會不會有哪個部位更結實？</p>
+<p xml:id="subtitle376" begin="10383199999t" end="10395999999t" region="region0" style="style0">我們坐下來才剛一分鐘…</p>
+<p xml:id="subtitle377" begin="10396800000t" end="10408800000t" region="region0" style="style0">可以摸一下嗎？</p>
+<p xml:id="subtitle378" begin="10535200000t" end="10547600000t" region="region0" style="style0">陪妳去樓下吃點東西吧</p>
+<p xml:id="subtitle379" begin="10589600000t" end="10603200000t" region="region0" style="style0">不用了，我一個人先走</p>
+<p xml:id="subtitle380" begin="10613600000t" end="10626800000t" region="region0" style="style0">已經轉帳給你了</p>
+<p xml:id="subtitle381" begin="10627600000t" end="10636400000t" region="region0" style="style0">拜拜</p>
+<p xml:id="subtitle382" begin="10700800000t" end="10724400000t" region="region0" style="style0">自從艾美幫我變身成帥哥</p>
+<p xml:id="subtitle383" begin="10725200000t" end="10744000000t" region="region0" style="style0">成為兼職男友之後</p>
+<p xml:id="subtitle384" begin="10744800000t" end="10770400000t" region="region0" style="style0">很多女客人約我陪她們玩</p>
+<p xml:id="subtitle385" begin="10774800000t" end="10792400000t" region="region0" style="style0">但慢慢開始</p>
+<p xml:id="subtitle386" begin="10797200000t" end="10812000000t" region="region0" style="style0">有些事不同了</p>
+<p xml:id="subtitle387" begin="10825600000t" end="10848400000t" region="region0" style="style0">第一、二次還算有新鮮感</p>
+<p xml:id="subtitle388" begin="10859200000t" end="10876800000t" region="region0" style="style0">之後我覺得太超過了</p>
+<p xml:id="subtitle389" begin="10890800000t" end="10908800000t" region="region0" style="style0">我想我不是要這些東西</p>
+<p xml:id="subtitle390" begin="10924800000t" end="10936400000t" region="region0" style="style0">又或者</p>
+<p xml:id="subtitle391" begin="10944000000t" end="10965600000t" region="region0" style="style0">其實我連這身分也不想要</p>
+<p xml:id="subtitle392" begin="10967600000t" end="10981200000t" region="region1" style="style0">（照片牆）</p>
+<p xml:id="subtitle393" begin="10982000000t" end="10991200000t" region="region1" style="style0">（私信）</p>
+<p xml:id="subtitle394" begin="10992000000t" end="11002400000t" region="region1" style="style0">（已過帳）</p>
+<p xml:id="subtitle395" begin="11003200000t" end="11015200000t" region="region1" style="style0">（可不可以交換相片來看？）</p>
+<p xml:id="subtitle396" begin="11016000000t" end="11026800000t" region="region1" style="style0">（我想要瘋狂的性愛）</p>
+<p xml:id="subtitle397" begin="11027600000t" end="11042400000t" region="region1" style="style0">（做一次愛多少錢？）</p>
+<p xml:id="subtitle398" begin="11175200000t" end="11185200000t" region="region0" style="style0">李先生</p>
+<p xml:id="subtitle399" begin="11194000000t" end="11208000000t" region="region0" style="style0">時間差不多了</p>
+<p xml:id="subtitle400" begin="11208800000t" end="11229600000t" region="region0" style="style0">球賽也快完了</p>
+<p xml:id="subtitle401" begin="11230400000t" end="11242000000t" region="region0" style="style0">我先走了</p>
+<p xml:id="subtitle402" begin="11262400000t" end="11274000000t" region="region0" style="style0">我想問一下</p>
+<p xml:id="subtitle403" begin="11282400000t" end="11306400000t" region="region0" style="style0">加錢是否可以有其他服務呢？</p>
+<p xml:id="subtitle404" begin="11325600000t" end="11336800000t" region="region0" style="style0">不好意思</p>
+<p xml:id="subtitle405" begin="11343200000t" end="11358400000t" region="region0" style="style0">我不做這些事的</p>
+<p xml:id="subtitle406" begin="11430000000t" end="11447600000t" region="region0" style="style0">喂，幹嘛？</p>
+<p xml:id="subtitle407" begin="11485600000t" end="11523600000t" region="region0" style="style0">
+我們這次回港
+<br/>
+謝謝你們帶我和盧卡斯四處逛逛
+</p>
+<p xml:id="subtitle408" begin="11528400000t" end="11542400000t" region="region0" style="style0">下星期就走了</p>
+<p xml:id="subtitle409" begin="11543200000t" end="11557600000t" region="region0" style="style0">今晚你們就別客氣了</p>
+<p xml:id="subtitle410" begin="11558400000t" end="11568000000t" region="region0" style="style0">隨便吃吧</p>
+<p xml:id="subtitle411" begin="11573200000t" end="11585600000t" region="region0" style="style0">難得你們回來玩</p>
+<p xml:id="subtitle412" begin="11586400000t" end="11599600000t" region="region0" style="style0">別這麼客氣吧</p>
+<p xml:id="subtitle413" begin="11608400000t" end="11629200000t" region="region0" style="style0">有空就多回來玩玩</p>
+<p xml:id="subtitle414" begin="11632400000t" end="11645600000t" region="region0" style="style0">艾美真乖</p>
+<p xml:id="subtitle415" begin="11646400000t" end="11665600000t" region="region0" style="style0">但都不知道下次什麼時候回來</p>
+<p xml:id="subtitle416" begin="11670400000t" end="11689200000t" region="region0" style="style0">到時候你們兩個年輕人</p>
+<p xml:id="subtitle417" begin="11690000000t" end="11704000000t" region="region0" style="style0">都可能成家立室了</p>
+<p xml:id="subtitle418" begin="11706000000t" end="11720400000t" region="region0" style="style0">是就好了</p>
+<p xml:id="subtitle419" begin="11725200000t" end="11739200000t" region="region0" style="style0">我的女兒這麼不懂事</p>
+<p xml:id="subtitle420" begin="11740000000t" end="11764400000t" region="region0" style="style0">盧卡斯越大越有型</p>
+<p xml:id="subtitle421" begin="11765200000t" end="11784800000t" region="region0" style="style0">看來妳很快就有兒媳婦敬茶了</p>
+<p xml:id="subtitle422" begin="11785600000t" end="11794800000t" region="region0" style="style0">是就好了</p>
+<p xml:id="subtitle423" begin="11909600000t" end="11919600000t" region="region0" style="style0">幹嘛？</p>
+<p xml:id="subtitle424" begin="11920400000t" end="11929200000t" region="region0" style="style0">有心事嗎？</p>
+<p xml:id="subtitle425" begin="11946800000t" end="11955600000t" region="region0" style="style0">沒有</p>
+<p xml:id="subtitle426" begin="11961200000t" end="11970000000t" region="region0" style="style0">沒有？</p>
+<p xml:id="subtitle427" begin="11994000000t" end="12006800000t" region="region0" style="style0">妳今晚有空嗎？</p>
+<p xml:id="subtitle428" begin="12023600000t" end="12036400000t" region="region0" style="style0">今晚不行</p>
+<p xml:id="subtitle429" begin="12046800000t" end="12070000000t" region="region0" style="style0">我約了帥哥去卡拉OK</p>
+<p xml:id="subtitle430" begin="12072800000t" end="12091200000t" region="region0" style="style0">你之後再來找我吧</p>
+<p xml:id="subtitle431" begin="12106800000t" end="12115200000t" region="region0" style="style0">好的</p>
+<p xml:id="subtitle432" begin="12229200000t" end="12250800000t" region="region0" style="style0">
+-乾杯
+<br/>
+-乾杯
+</p>
+<p xml:id="subtitle433" begin="12251600000t" end="12263200000t" region="region0" style="style0">喝光啊</p>
+<p xml:id="subtitle434" begin="12326400000t" end="12345600000t" region="region0" style="style0">妳怎麼了？不對口味嗎？</p>
+<p xml:id="subtitle435" begin="12355600000t" end="12367200000t" region="region0" style="style0">有點太烈</p>
+<p xml:id="subtitle436" begin="12368000000t" end="12377200000t" region="region0" style="style0">好吧</p>
+<p xml:id="subtitle437" begin="12380400000t" end="12396800000t" region="region0" style="style0">
+-我給妳換一杯淡一點的
+<br/>
+-嗯
+</p>
+<p xml:id="subtitle438" begin="12397600000t" end="12414400000t" region="region0" style="style0">你們唱歌吧，陪她唱歌</p>
+<p xml:id="subtitle439" begin="12415200000t" end="12425200000t" region="region0" style="style0">好啊</p>
+<p xml:id="subtitle440" begin="12427200000t" end="12444000000t" region="region0" style="style0">
+-我們一起唱吧
+<br/>
+-好啊…
+</p>
+<p xml:id="subtitle441" begin="12478800000t" end="12492400000t" region="region0" style="style0">唱什麼歌好呢？</p>
+<p xml:id="subtitle442" begin="12501600000t" end="12510800000t" region="region0" style="style0">謝謝</p>
+<p xml:id="subtitle443" begin="12574400000t" end="12583200000t" region="region0" style="style0">唱…</p>
+<p xml:id="subtitle444" begin="12613600000t" end="12627600000t" region="region0" style="style0">
+-喂
+<br/>
+-那首吧
+</p>
+<p xml:id="subtitle445" begin="12628400000t" end="12642000000t" region="region0" style="style0">
+-試試這杯
+<br/>
+-好的
+</p>
+<p xml:id="subtitle446" begin="12642800000t" end="12655200000t" region="region0" style="style0">
+-乾杯
+<br/>
+-謝謝
+</p>
+<p xml:id="subtitle447" begin="12686800000t" end="12700400000t" region="region0" style="style0">
+-可以嗎？
+<br/>
+-嗯
+</p>
+<p xml:id="subtitle448" begin="12739600000t" end="12750800000t" region="region0" style="style0">五個六</p>
+<p xml:id="subtitle449" begin="12751600000t" end="12760800000t" region="region0" style="style0">六個二</p>
+<p xml:id="subtitle450" begin="12768800000t" end="12782800000t" region="region0" style="style0">這麼多？我開吧</p>
+<p xml:id="subtitle451" begin="12887200000t" end="12900000000t" region="region0" style="style0">三個四</p>
+<p xml:id="subtitle452" begin="12900800000t" end="12910800000t" region="region0" style="style0">三個四？</p>
+<p xml:id="subtitle453" begin="12911600000t" end="12920400000t" region="region0" style="style0">五個六</p>
+<p xml:id="subtitle454" begin="12968000000t" end="12985200000t" region="region0" style="style0">（艾美）</p>
+<p xml:id="subtitle455" begin="12992000000t" end="13007600000t" region="region0" style="style0">我不太舒服</p>
+<p xml:id="subtitle456" begin="13008400000t" end="13020000000t" region="region0" style="style0">來接我</p>
+<p xml:id="subtitle457" begin="13065200000t" end="13080400000t" region="region0" style="style0">喂，妳怎麼了？</p>
+<p xml:id="subtitle458" begin="13084400000t" end="13101600000t" region="region0" style="style0">妳看起來很醉，還可以嗎？</p>
+<p xml:id="subtitle459" begin="13126000000t" end="13142800000t" region="region0" style="style0">我送妳回家吧，走了</p>
+<p xml:id="subtitle460" begin="13145200000t" end="13158800000t" region="region0" style="style0">
+-我沒事
+<br/>
+-不是的
+</p>
+<p xml:id="subtitle461" begin="13159600000t" end="13172800000t" region="region0" style="style0">妳醉成這樣，快點回去，來</p>
+<p xml:id="subtitle462" begin="13173600000t" end="13187200000t" region="region0" style="style0">手袋給我，我替妳拿</p>
+<p xml:id="subtitle463" begin="13189600000t" end="13203600000t" region="region0" style="style0">來，走吧</p>
+<p xml:id="subtitle464" begin="13214400000t" end="13226000000t" region="region0" style="style0">喂，我們先走了</p>
+<p xml:id="subtitle465" begin="13228400000t" end="13240400000t" region="region0" style="style0">好吧，拜拜</p>
+<p xml:id="subtitle466" begin="13245200000t" end="13254000000t" region="region0" style="style0">慢走</p>
+<p xml:id="subtitle467" begin="13266000000t" end="13276000000t" region="region0" style="style0">妳怎麼樣？</p>
+<p xml:id="subtitle468" begin="13297600000t" end="13306400000t" region="region0" style="style0">小心</p>
+<p xml:id="subtitle469" begin="13325600000t" end="13342800000t" region="region0" style="style0">妳醉成這樣，我送妳回家吧</p>
+<p xml:id="subtitle470" begin="13348400000t" end="13358800000t" region="region0" style="style0">我沒醉</p>
+<p xml:id="subtitle471" begin="13359600000t" end="13375200000t" region="region0" style="style0">
+-妳在說什麼啊？
+<br/>
+-喂！你幹嘛？
+</p>
+<p xml:id="subtitle472" begin="13383600000t" end="13399200000t" region="region0" style="style0">幹嘛抱着我的朋友啊？</p>
+<p xml:id="subtitle473" begin="13424800000t" end="13438000000t" region="region0" style="style0">
+-妳沒事嗎？
+<br/>
+-對不起
+</p>
+<p xml:id="subtitle474" begin="13460400000t" end="13468800000t" region="region0" style="style0">我們走</p>
+<p xml:id="subtitle475" begin="13535200000t" end="13555200000t" region="region0" style="style0">當心有樓梯，一級一級來</p>
+<p xml:id="subtitle476" begin="13556400000t" end="13570800000t" region="region0" style="style0">沒錯，慢慢來…</p>
+<p xml:id="subtitle477" begin="13572000000t" end="13580800000t" region="region0" style="style0">好了</p>
+<p xml:id="subtitle478" begin="13589600000t" end="13605600000t" region="region0" style="style0">
+-慢慢來…
+<br/>
+-好
+</p>
+<p xml:id="subtitle479" begin="13628400000t" end="13645200000t" region="region0" style="style0">妳還行嗎？不如先坐下吧</p>
+<p xml:id="subtitle480" begin="13646000000t" end="13654800000t" region="region0" style="style0">好</p>
+<p xml:id="subtitle481" begin="13655600000t" end="13670400000t" region="region0" style="style0">好不好啊？妳先坐下，慢慢來…</p>
+<p xml:id="subtitle482" begin="13673200000t" end="13686000000t" region="region0" style="style0">
+-小心…
+<br/>
+-對不起…
+</p>
+<p xml:id="subtitle483" begin="13750800000t" end="13760400000t" region="region0" style="style0">妳怎麼樣？</p>
+<p xml:id="subtitle484" begin="13768000000t" end="13779200000t" region="region0" style="style0">我們要不要報警？</p>
+<p xml:id="subtitle485" begin="13790000000t" end="13799200000t" region="region0" style="style0">不用</p>
+<p xml:id="subtitle486" begin="13803600000t" end="13814800000t" region="region0" style="style0">我沒事</p>
+<p xml:id="subtitle487" begin="13875200000t" end="13891200000t" region="region0" style="style0">我不想再當兼職男友</p>
+<p xml:id="subtitle488" begin="13920400000t" end="13933200000t" region="region0" style="style0">為什麼？</p>
+<p xml:id="subtitle489" begin="13979600000t" end="13994800000t" region="region0" style="style0">我開始接受不了了</p>
+<p xml:id="subtitle490" begin="14010000000t" end="14038000000t" region="region0" style="style0">我一開始以為女生約我</p>
+<p xml:id="subtitle491" begin="14038800000t" end="14053200000t" region="region0" style="style0">我可以趁機跟她約會</p>
+<p xml:id="subtitle492" begin="14066800000t" end="14082800000t" region="region0" style="style0">但每次上床後</p>
+<p xml:id="subtitle493" begin="14087600000t" end="14101200000t" region="region0" style="style0">我只覺得很空虛</p>
+<p xml:id="subtitle494" begin="14114800000t" end="14124800000t" region="region0" style="style0">我懂</p>
+<p xml:id="subtitle495" begin="14148000000t" end="14162000000t" region="region0" style="style0">只有肉體的關係</p>
+<p xml:id="subtitle496" begin="14177200000t" end="14191600000t" region="region0" style="style0">妳不覺得很假嗎？</p>
+<p xml:id="subtitle497" begin="14202000000t" end="14214000000t" region="region0" style="style0">上床像演戲</p>
+<p xml:id="subtitle498" begin="14226000000t" end="14236400000t" region="region0" style="style0">都沒感情</p>
+<p xml:id="subtitle499" begin="14244400000t" end="14253600000t" region="region0" style="style0">沒愛</p>
+<p xml:id="subtitle500" begin="14283600000t" end="14292000000t" region="region0" style="style0">沒愛</p>
+<p xml:id="subtitle501" begin="14317200000t" end="14338000000t" region="region0" style="style0">那就是做雞了</p>
+<p xml:id="subtitle502" begin="14376400000t" end="14387200000t" region="region0" style="style0">做鴨啊</p>
+<p xml:id="subtitle503" begin="14468800000t" end="14480400000t" region="region0" style="style0">妳有沒有好一些？</p>
+<p xml:id="subtitle504" begin="14490000000t" end="14509200000t" region="region0" style="style0">
+-我扶妳回去吧
+<br/>
+-嗯
+</p>
+<p xml:id="subtitle505" begin="14510000000t" end="14522800000t" region="region0" style="style0">
+-好嗎？
+<br/>
+-嗯
+</p>
+<p xml:id="subtitle506" begin="14527600000t" end="14536400000t" region="region0" style="style0">等一下</p>
+<p xml:id="subtitle507" begin="14547600000t" end="14565200000t" region="region0" style="style0">一、二、三</p>
+<p xml:id="subtitle508" begin="14574800000t" end="14584000000t" region="region0" style="style0">慢慢來</p>
+<p xml:id="subtitle509" begin="14590400000t" end="14607600000t" region="region0" style="style0">小心…慢慢來…</p>
+<p xml:id="subtitle510" begin="14611600000t" end="14623600000t" region="region0" style="style0">看着啊，慢慢…</p>
+<p xml:id="subtitle511" begin="14638000000t" end="14650800000t" region="region0" style="style0">喂！當心！</p>
+<p xml:id="subtitle512" begin="14659600000t" end="14670400000t" region="region0" style="style0">不如我抱妳吧？</p>
+<p xml:id="subtitle513" begin="14677200000t" end="14688400000t" region="region0" style="style0">不用了</p>
+<p xml:id="subtitle514" begin="14689200000t" end="14698400000t" region="region0" style="style0">拿着</p>
+<p xml:id="subtitle515" begin="14718800000t" end="14727200000t" region="region0" style="style0">拿穩</p>
+<p xml:id="subtitle516" begin="14763600000t" end="14780400000t" region="region0" style="style0">
+-行嗎？
+<br/>
+-嗯
+</p>
+<p xml:id="subtitle517" begin="14810800000t" end="14831600000t" region="region0" style="style0">我叫你當兼職男友</p>
+<p xml:id="subtitle518" begin="14840000000t" end="14852000000t" region="region0" style="style0">你有生氣嗎？</p>
+<p xml:id="subtitle519" begin="14876400000t" end="14906800000t" region="region0" style="style0">怎麼會呢？我也有份同意的</p>
+<p xml:id="subtitle520" begin="14923200000t" end="14956800000t" region="region0" style="style0">或者我跟你其實都不適合做這種兼職</p>
+<p xml:id="subtitle521" begin="14963200000t" end="14984400000t" region="region0" style="style0">嗯，我也是這樣認為</p>
+<p xml:id="subtitle522" begin="14989200000t" end="15003600000t" region="region0" style="style0">在這晚之後</p>
+<p xml:id="subtitle523" begin="15010400000t" end="15028000000t" region="region0" style="style0">我們一起做了一個決定</p>
+<p xml:id="subtitle524" begin="15030400000t" end="15058000000t" region="region0" style="style0">一起放棄了兼職的身分</p>
+<p xml:id="subtitle525" begin="15098000000t" end="15123200000t" region="region0" style="style0">你以前那些很丑的衣服就別穿了</p>
+<p xml:id="subtitle526" begin="15124000000t" end="15144400000t" region="region0" style="style0">
+-給我燒掉它
+<br/>
+-好啊
+</p>
+<p xml:id="subtitle527" begin="15146800000t" end="15158400000t" region="region0" style="style0">今晚就燒掉它</p>
+<p xml:id="subtitle528" begin="15169200000t" end="15189600000t" region="region0" style="style0">我也丟掉那帽子了</p>
+<p xml:id="subtitle529" begin="15192400000t" end="15202400000t" region="region0" style="style0">好孩子</p>
+<p xml:id="subtitle530" begin="15211600000t" end="15225200000t" region="region0" style="style0">穿這些就對了</p>
+<p xml:id="subtitle531" begin="15228400000t" end="15239600000t" region="region0" style="style0">保持着啊</p>
+<p xml:id="subtitle532" begin="15258000000t" end="15281200000t" region="region0" style="style0">媽，妳們先進去吧</p>
+<p xml:id="subtitle533" begin="15284000000t" end="15299600000t" region="region0" style="style0">我們待會進來</p>
+<p xml:id="subtitle534" begin="15314000000t" end="15322800000t" region="region0" style="style0">幹嘛啊？</p>
+<p xml:id="subtitle535" begin="15336000000t" end="15344800000t" region="region0" style="style0">跟我過來</p>
+<p xml:id="subtitle536" begin="15392800000t" end="15402400000t" region="region0" style="style0">坐吧</p>
+<p xml:id="subtitle537" begin="15436400000t" end="15444800000t" region="region0" style="style0">幹嘛啊？</p>
+<p xml:id="subtitle538" begin="15507600000t" end="15516000000t" region="region0" style="style0">送你的</p>
+<p xml:id="subtitle539" begin="15522400000t" end="15533200000t" region="region0" style="style0">什麼來的？</p>
+<p xml:id="subtitle540" begin="15540800000t" end="15549200000t" region="region0" style="style0">能吃的？</p>
+<p xml:id="subtitle541" begin="15552400000t" end="15568800000t" region="region0" style="style0">是啊，把它吃光吧</p>
+<p xml:id="subtitle542" begin="15610400000t" end="15620400000t" region="region0" style="style0">真的是妳做的？</p>
+<p xml:id="subtitle543" begin="15624400000t" end="15633200000t" region="region0" style="style0">是的</p>
+<p xml:id="subtitle544" begin="15645200000t" end="15658000000t" region="region0" style="style0">幹嘛這麼好</p>
+<p xml:id="subtitle545" begin="15658800000t" end="15670800000t" region="region0" style="style0">無端端做便當給我啊？</p>
+<p xml:id="subtitle546" begin="15680000000t" end="15690800000t" region="region0" style="style0">想做就做</p>
+<p xml:id="subtitle547" begin="15714000000t" end="15722800000t" region="region0" style="style0">謝謝</p>
+<p xml:id="subtitle548" begin="15767200000t" end="15779600000t" region="region0" style="style0">妳是否真的…</p>
+<p xml:id="subtitle549" begin="15785600000t" end="15799600000t" region="region0" style="style0">不會再當兼職女友啊？</p>
+<p xml:id="subtitle550" begin="15807600000t" end="15816000000t" region="region0" style="style0">是啊</p>
+<p xml:id="subtitle551" begin="15824800000t" end="15834000000t" region="region0" style="style0">真的？</p>
+<p xml:id="subtitle552" begin="15858800000t" end="15867200000t" region="region0" style="style0">是啊</p>
+<p xml:id="subtitle553" begin="15872800000t" end="15883200000t" region="region0" style="style0">別再問了</p>
+<p xml:id="subtitle554" begin="15891200000t" end="15908400000t" region="region0" style="style0">登機了，走吧</p>
+<p xml:id="subtitle555" begin="15968800000t" end="15977200000t" region="region0" style="style0">艾美</p>
+<p xml:id="subtitle556" begin="16000000000t" end="16008800000t" region="region0" style="style0">幹嘛啊？</p>
+<p xml:id="subtitle557" begin="16027200000t" end="16043600000t" region="region0" style="style0">可以當我全職女友嗎？</p>
+<p xml:id="subtitle558" begin="16213200000t" end="16221600000t" region="region0" style="style0">好啊</p>
+</div>
+</body>
+</tt>
