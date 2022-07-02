@@ -31,6 +31,7 @@ var (
 	maxMergeGap = flag.Duration("maxMergeGap", 3*time.Second, "allow subtitles that are part of the same sentence to be merged if gap between them is less than `DURATION`")
 	imgWidth    = flag.Float64("imgwidth", 1400, "scale imgs to this width")
 	numCores    = flag.Int("numCore", 2*runtime.NumCPU(), "use up to `CORES` threads while converting audio")
+	track       = flag.Int("track", -1, "select audio track")
 
 	canto = flag.Bool("canto", false, "alias for -jp -ruby -colorize -noMerge")
 )
@@ -55,13 +56,17 @@ func extractClip(idx int, item *Sub) {
 	tmp := mediaDir + "tmp." + nm
 	ss := (item.From - *xbefore).Seconds()
 	t := (item.To + *xafter).Seconds() - ss
-	cmd := exec.Command("nice", "ffmpeg",
+	args := []string{"ffmpeg",
 		"-y", // overwrite existing files
 		"-i", *movFile,
 		"-ss", fmt.Sprintf("%.03f", ss),
 		"-t", fmt.Sprintf("%.03f", t),
-		tmp,
-	)
+	}
+	if *track != -1 {
+		args = append(args, []string{"-map", fmt.Sprint("0:", *track)}...)
+	}
+	args = append(args, tmp)
+	cmd := exec.Command("nice", args...)
 	fmt.Println(">", strings.Join(cmd.Args, " "))
 	buf, err := cmd.CombinedOutput()
 	if err != nil {
