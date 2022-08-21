@@ -144,7 +144,7 @@ func overlappingSubs(sub *Sub, subs []*Sub) []*Sub {
 		i++
 	}
 	j := i
-	for j < len(subs) && !(sub.To < subs[j].From) {
+	for j < len(subs) && !(sub.To <= subs[j].From) {
 		j++
 	}
 	return subs[i:j]
